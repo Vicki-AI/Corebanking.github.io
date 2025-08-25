@@ -1,0 +1,269 @@
+{
+  "id": "corporate-deposit",
+  "name": "对公存款",
+  "icon": "fas fa-building",
+  "description": "为企业客户提供账户、结算及现金管理等存款服务。",
+  "overview": {
+    "summary": "提供一站式对公账户全生命周期管理、多元化支付结算以及丰富的存款产品矩阵，助力企业高效进行现金管理与资金增值。"
+  },
+  "modules": [
+    {
+      "id": "corp-account-cash",
+      "name": "账户结算及现金管理",
+      "icon": "fas fa-money-bill-wave",
+      "description": "提供对公账户管理、支付结算和各类对公存款产品的核心功能。",
+      "submodules": [
+        {
+          "name": "对公账户管理中心",
+          "functions": [
+            {
+              "id": "func-cd-acct-open",
+              "title": "账户开立",
+              "description": "提供开立对公一般结算户或子户的功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "开户"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-offline-verify",
+              "title": "线下核验",
+              "description": "银行对企业提交的开户资料进行线下审核，以确定客户身份真实性、合法性等。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "审核"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-record",
+              "title": "账户备案",
+              "description": "向相关金融监管机构提交相关资料,以完成备案手续。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "备案", "监管"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-query",
+              "title": "账户查询",
+              "description": "提供账户余额、交易明细、回单、对账单等查询功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "查询"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-change",
+              "title": "账户变更",
+              "description": "提供对公账户信息变更的功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "变更"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-close",
+              "title": "账户注销",
+              "description": "提供注销对公账户的功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "注销"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-annual-check",
+              "title": "账户年检",
+              "description": "按年度根据存款人提交的账户年检资料，对已开立的人民币单位银行结算账户的合规性、合法性和账户信息、账户资料的真实性、有效性进行审核确认同时与人民币银行结算账户管理系统中已存信息进行比对，确认是否相符，并在账户系统中标注年检标识。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "年检"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-dormant-check",
+              "title": "账户久悬检查",
+              "description": "针对对公结算户进行检查，识别一年以上未发生收付活动的账户，进行打标。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "久悬户"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-abnormal-check",
+              "title": "月度经营异常检查",
+              "description": "按月对企业经营情况进行异常审查。企业经营异常通常指企业在经营过程中因违反相关法规或未履行法定义务被市场监管部门列入经营异常名录的情形。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "经营异常"], "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-reconciliation",
+              "title": "对公户银企对账",
+              "description": "由银行发起,采取以时点余额为基数,通过调整双方未达账项,确认银企当期发生业务是否一致。",
+              "version": "1.0", "status": "已上线", "tags": ["账户管理", "对账"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "支付结算管理平台",
+          "functions": [
+            {
+              "id": "func-cd-payment-single",
+              "title": "单笔转账",
+              "description": "将款项由本行一般结算户划转到其它收款账户。",
+              "version": "1.0", "status": "已上线", "tags": ["支付结算", "转账"], "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-batch",
+              "title": "批量转账",
+              "description": "将款项由本行一般结算户划转到其它收款账户，每次处理多笔。",
+              "version": "1.0", "status": "已上线", "tags": ["支付结算", "批量"], "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-scheduled",
+              "title": "预约转账",
+              "description": "由客户预设时点，将款项由本行一般结算户划转到其它收款账户。",
+              "version": "1.0", "status": "已上线", "tags": ["支付结算", "预约"], "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-payroll",
+              "title": "企业发薪",
+              "description": "提供代发工资、补贴、津贴等薪酬支付功能。",
+              "version": "1.0", "status": "已上线", "tags": ["支付结算", "代发"], "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-reimbursement",
+              "title": "企业代发",
+              "description": "提供其他代发功能，如费用报销等其他非薪酬类的企业公转私功能。",
+              "version": "1.0", "status": "已上线", "tags": ["支付结算", "代发"], "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-collection",
+              "title": "企业收款",
+              "description": "提供对公、对私的收款能力。",
+              "version": "1.0", "status": "已上线", "tags": ["支付结算", "收款"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "对公存款管理平台",
+          "functions": [
+            {
+              "id": "func-cd-product-shelf",
+              "title": "存款产品上下架",
+              "description": "存款产品创建、维护、发布。",
+              "version": "1.0", "status": "已上线", "tags": ["存款产品", "管理"], "documentLink": null
+            },
+            {
+              "id": "func-cd-product-display",
+              "title": "存款产品展示",
+              "description": "向用户展示存款产品的关键信息，包含产品名称、收益率、产品购买及推出规则等。",
+              "version": "1.0", "status": "已上线", "tags": ["存款产品", "展示"], "documentLink": null
+            },
+            {
+              "id": "func-cd-asset-query",
+              "title": "持有资产及收益查询",
+              "description": "向客户展示各种形式的资产状况及其受益状况。",
+              "version": "1..0", "status": "已上线", "tags": ["存款产品", "查询"], "documentLink": null
+            },
+            {
+              "id": "func-cd-agreement-deposit",
+              "title": "协定存款签约/解约",
+              "description": "提供协定存款产品的签约及解约功能。协定存款是对公客户与银行签订协定存款合同，双方商定对公客户保留一定金额的存款以应付日常结算，此部分按普通活期利率计付利息，超过定额金额的那部分存款按协定存款利率计付利息。",
+              "version": "1.0", "status": "已上线", "tags": ["存款产品", "协定存款"], "documentLink": null
+            },
+            {
+              "id": "func-cd-notice-deposit",
+              "title": "通知存款存入/支取",
+              "description": "提供通知存款产品的存入及支取功能。通知存款是指存款人在存入款项时不约定存期，支取时需提前通知金融机构，约定支取存款期和金额才能支取的存款。",
+              "version": "1.0", "status": "已上线", "tags": ["存款产品", "通知存款"], "documentLink": null
+            },
+            {
+              "id": "func-cd-time-deposit",
+              "title": "定期存款存入/支取",
+              "description": "提供定期存款产品的存入及支取功能。定期存款是银行与存款人双方在存款时事先约定期限、利率，到期后支取本息的存款。",
+              "version": "1.0", "status": "已上线", "tags": ["存款产品", "定期存款"], "documentLink": null
+            },
+            {
+              "id": "func-cd-large-cd",
+              "title": "大额存单存入/支取",
+              "description": "提供大额存单产品的存入及支取功能。大额存单是银行发行的一种定期的存款凭证，金额较大，且为整数，标明了存款日期和到期日以及利息，到期后可以获得本金和利息。大额存单可以转让，自由买卖。",
+              "version": "1.0", "status": "已上线", "tags": ["存款产品", "大额存单"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corp-common-product",
+      "name": "通用产品中心",
+      "icon": "fas fa-sitemap",
+      "submodules": [
+      {
+          "name": "对公客户信息管理中心",
+          "functions": [
+            {
+              "id": "func-cd-cust-create",
+              "title": "创建客户",
+              "description": "根据企业客户信息在系统中创建客户信息，分配客户号。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["客户管理", "创建"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-maintain",
+              "title": "客户信息维护",
+              "description": "提供企业客户信息修改的功能。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["客户管理", "维护"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-batch-maintain",
+              "title": "批量信息维护",
+              "description": "提供企业客户信息批量修改的功能。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["客户管理", "批量"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-query",
+              "title": "客户信息查询",
+              "description": "提供企业客户信息查询的功能。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["客户管理", "查询"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-delete-record",
+              "title": "客户信息记录删除",
+              "description": "提供企业客户信息记录删除的功能，如联系信息、证件信息等，删除后企业客户在系统内仍为正常客户。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["客户管理", "删除"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-close",
+              "title": "注销客户",
+              "description": "提供企业客户注销的功能，注销后企业客户在系统内状态为“注销”。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["客户管理", "注销"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corp-support",
+      "name": "底层能力支持",
+      "icon": "fas fa-cogs",
+      "submodules": [
+      {
+          "name": "开放银行",
+          "functions": [
+            {
+              "id": "func-cd-open-partner",
+              "title": "合作方接入",
+              "description": "在开放银行平台为合作方登记信息、分配接入权限。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["开放银行", "API"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-open-api-mgmt",
+              "title": "API管理",
+              "description": "对银行内部服务接口向合作方输出进行管控。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["开放银行", "API"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+
+    }
+  ]
+}

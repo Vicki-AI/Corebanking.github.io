@@ -1,0 +1,755 @@
+{
+  "id": "retail-loan",
+  "name": "零售贷款",
+  "icon": "fas fa-hand-holding-usd",
+  "description": "为个人客户提供多样化的贷款服务，包括消费贷款、住房贷款、汽车贷款等各类信贷产品。",
+  "overview": {
+    "summary": "一个覆盖贷前、贷中、贷后全生命周期的数字化信贷解决方案，高度灵活的产品配置工厂、数据驱动的全流程智能风控体系以及精细化的营销清收运营能力。"
+  },
+  "modules": [
+    {
+      "id": "retail-loan-core",
+      "name": "零售贷款核心",
+      "icon": "fas fa-landmark",
+      "description": "提供贷款业务的账户、产品、计息、放还款等核心账务处理能力。",
+      "submodules": [
+        {
+          "name": "账务核心",
+          "functions": [
+            {
+              "id": "func-rlc-account-mgmt",
+              "title": "客账户管理",
+              "description": "包括开户、销户\\关闭、账户重启、账户信息修改等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "账户"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-product-factory",
+              "title": "产品配置工厂",
+              "description": "贷款产品支持高度灵活的配置化，上线新产品可完全配置化上线。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "产品工厂"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-lending-repayment",
+              "title": "放还款功能",
+              "description": "支持放还款功能，且支持放款和还款的反向交易，放款撤销与还款撤销功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "交易"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-interest-accrual",
+              "title": "计息与结转",
+              "description": "支持各种计息方式，且高度配置化。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "计息"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-billing-mgmt",
+              "title": "账单管理",
+              "description": "账单产品的账单创建更新展示等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "账单"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-asset-disposal",
+              "title": "资产处置",
+              "description": "支持ABS、核销、保险等资产处置方式。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "资产处置"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-reconciliation",
+              "title": "对账体系",
+              "description": "对账方式包括但不限于核账（发生额对账）、对账（余额对账）、合理性分析三种方式。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "对账"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-accounting",
+              "title": "会计账处理（可选）",
+              "description": "支持会计账处理，拆税，报送总账等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "会计"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-asset-restructuring",
+              "title": "资产重组",
+              "description": "借新还旧、展期等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "资产重组"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "产品中心",
+          "functions": [
+            {
+              "id": "func-rlc-product-process",
+              "title": "产品流程管理",
+              "description": "涉及开户，放款，还款，非金融，运营等功能，开户，借款支持流程编排。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "流程"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-agreement-center",
+              "title": "客户协议中心",
+              "description": "管理联机主动还款，批扣，来账，内管还款减免协议，达到精细化运营，目标提升回款率。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "协议"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-pricing-center",
+              "title": "定价中心",
+              "description": "管理产品定价，支持规则包和规则表等多种实现。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "定价"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-incoming-center",
+              "title": "来账中心",
+              "description": "支持来账入金，来账还款，支持客户级结清或者部分还。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "来账"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-style-center",
+              "title": "样式中心",
+              "description": "不同客群，标签或者指标的客户展示不同的前端样式。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "前端"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-contract-mgmt",
+              "title": "产品合同管理",
+              "description": "管理不同产品在不同场景下的合同模板，支持模板的灵活配置。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "合同"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-debit-center",
+              "title": "扣账中心",
+              "description": "进行对账文件，差错文件，支持通用化对账，产品跟核心对账，产品跟不同渠道对账。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "对账", "扣款"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-batch-notify",
+              "title": "批量提醒",
+              "description": "账单日提醒、不良征信上报提醒等。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "批量", "提醒"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "扣款中心",
+          "functions": [
+            {
+              "id": "func-rlc-debit-agreement",
+              "title": "客户扣款协议管理",
+              "description": "进行卡列表查询、客户卡信息解绑等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["扣款", "协议"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-debit-batch",
+              "title": "灵活批扣管理",
+              "description": "进行灵活的批扣决策及批扣、智能扣、日终对账、轻量化对账。",
+              "version": "1.0", "status": "已上线", "tags": ["扣款", "批扣", "对账"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-debit-online",
+              "title": "联机动账基础能力",
+              "description": "提供联机动账能力,管理台账。",
+              "version": "1.0", "status": "已上线", "tags": ["扣款", "联机"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "贷款账务运营平台",
+          "functions": [
+            {
+              "id": "func-rlc-ops-query",
+              "title": "客户卡账客信息查询",
+              "description": "账务日常运营管理, 查询客户基础信息、账户信息、交易流水记录、入账历史，借据信息等。",
+              "version": "1.0", "status": "已上线", "tags": ["运营", "查询"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-ops-manual",
+              "title": "运营手工还款/调账",
+              "description": "该功能通过联机文件上传的方式, 按照系统指定的模板填写信息导入。可应用于费用贷调/还款的场景，包括提前结清、违约金贷调、利罚息贷调、手工还款等。",
+              "version": "1.0", "status": "已上线", "tags": ["运营", "手工还款", "调账"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-ops-writeoff",
+              "title": "核销文件处理",
+              "description": "可以让运营人员将待核销(一种资产处置的方式，为了把表内劣质资产转到表外，降低不良率)的借据清单，文件按规定格式上传后，复核审批通过，日终时进入贷款系统批量处理核销流程。",
+              "version": "1.0", "status": "已上线", "tags": ["运营", "核销", "资产处置"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-ops-reconciliation",
+              "title": "账务核对管理",
+              "description": "核对内部户的金额是否正确。",
+              "version": "1.0", "status": "已上线", "tags": ["运营", "账务核对"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-risk-control",
+      "name": "信贷风控",
+      "icon": "fas fa-user-shield",
+      "description": "提供贷前、贷中、贷后全流程的风险控制与决策能力。",
+      "submodules": [
+        {
+          "name": "零售贷款审批平台",
+          "functions": [
+            {
+              "id": "func-crc-approval-datasource",
+              "title": "外查征信数据源及变量衍生",
+              "description": "为了辅助风险自动化决策，往往需要接入外部数据源将其进行变量衍生加工，此模块及负责对接外部数据源厂商以及提供编写片段Python代码进行变量衍生的功能。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "数据源", "征信"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-strategy",
+              "title": "自动化审批策略管理",
+              "description": "支持基于experian策略包的发布、运行管理。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "策略管理"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-process",
+              "title": "审批流程管理",
+              "description": "进行名单审批、欺诈审批、核身审批、调额调价等风险流程管理。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "流程管理"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-scoring",
+              "title": "评分模型管理",
+              "description": "支持机器学习模型的验证和模型运行。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "模型管理", "评分卡"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-manual-review",
+              "title": "远程审核作业平台(可选)",
+              "description": "在线上自动化审批流程中，对高风险和难以自动判别风险的审批申请案件转人工审批，提供一站式的人工审批系统，包含自动外呼、导向式的问题库、人工视频照片的审核等等。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "人工审核"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-inloan-decision",
+              "title": "贷中决策管理(可选)",
+              "description": "贷款发放后，批量对再贷客户、已开户未借款客户、静默客户等等进行贷中的风险决策，用于驱动额度的调整、风险等级的调整等等。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "贷中决策"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-biz-auth",
+              "title": "经营身份认证",
+              "description": "进行工商数据、小微企业信息查询，完成个人经营身份认证。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "经营贷", "认证"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-biz-limit",
+              "title": "经营贷统一额度管理",
+              "description": "授信、个人及企业额度管理。",
+              "version": "1.0", "status": "已上线", "tags": ["审批", "经营贷", "额度"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "零售贷款反欺诈平台",
+          "functions": [
+            {
+              "id": "func-crc-antifraud-datasource",
+              "title": "外查征信数据源及变量衍生",
+              "description": "为了辅助风险自动化决策，往往需要接入外部数据源将其进行变量衍生加工，此模块及负责对接外部数据源厂商以及提供编写片段Python代码进行变量衍生的功能。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "数据源"], "documentLink": null
+            },
+            {
+              "id": "func-crc-antifraud-kyc",
+              "title": "客户身份识别KYC",
+              "description": "在线上审批流程中，加入刷脸等流程识别客户的身份，客户提交刷脸信息后，后台系统通过执行业务策略判别客户是否是本人。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "KYC", "人脸识别"], "documentLink": null
+            },
+            {
+              "id": "func-crc-antifraud-strategy-mgmt",
+              "title": "反欺诈策略管理",
+              "description": "负责执行experian策略，构造输入调用策略，基于输出进行反欺诈决策动作。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "策略管理"], "documentLink": null
+            },
+            {
+              "id": "func-crc-antifraud-model-mgmt",
+              "title": "反欺诈模型管理",
+              "description": "调用机器学习模型执行，构造输入，基于模型的输出数据进行反欺诈决策动作。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "模型管理"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marketing-operations",
+      "name": "营销运营",
+      "icon": "fas fa-bullhorn",
+      "description": "支持营销活动、客户分层和精细化运营。",
+      "submodules": [
+      {
+          "name": "活动运营平台",
+          "functions": [
+            {
+              "id": "func-mo-benefits-mgmt",
+              "title": "权益管理",
+              "description": "通过差异化权益组合和精准核算（如返现记账），实现营销活动的灵活配置与成本控制。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "权益", "成本控制"],
+              "documentLink": null
+            },
+            {
+              "id": "func-mo-tags-library",
+              "title": "营销客群标签库",
+              "description": "构建覆盖产品、风险、营销、外部数据四大维度的标签体系，支持动态订阅与组合策略，赋能精准客群圈选与场景化营销。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "客群", "标签"],
+              "documentLink": null
+            },
+            {
+              "id": "func-mo-material-mgmt",
+              "title": "营销素材管理",
+              "description": "提供素材全生命周期管理（上传-审核-下线）和A/B测试，结合优先级算法实现个性化内容智能匹配与动态优化。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "素材", "A/B测试"],
+              "documentLink": null
+            },
+            {
+              "id": "func-mo-channel-mgmt",
+              "title": "营销渠道管理",
+              "description": "基于智能路由引擎（如APP/短信/外呼）和多渠道协同网关，动态选择最优触达路径并实时优化低效渠道资源。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "渠道", "智能路由"],
+              "documentLink": null
+            },
+            {
+              "id": "func-mo-campaign-mgmt",
+              "title": "营销活动管理",
+              "description": "模块化支持活动全周期配置（策略/渠道/权益/客群）、AB测试及营销日历，实现活动小时级上线与T+1效果分析。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "活动管理"],
+              "documentLink": null
+            },
+            {
+              "id": "func-mo-activity-monitoring",
+              "title": "活动监控及分析",
+              "description": "通过实时监测看板追踪转化率、互动行为等指标，结合多维度漏斗分析和秒级预警驱动策略动态调整。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "监控", "数据分析"],
+              "documentLink": null
+            },
+            {
+              "id": "func-mo-attribution-analysis",
+              "title": "活动效果归因",
+              "description": "整合多源数据，应用多种归因模型（如首次/末次/时间衰减）量化渠道贡献度，指导运营、产品及活动优化。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["营销", "效果归因", "数据分析"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loan-collection-ops",
+      "name": "个贷清收运营",
+      "icon": "fas fa-comment-dollar",
+      "description": "提供专业的贷后清收作业和运营管理能力。",
+      "submodules": [
+      {
+          "name": "催收分案系统",
+          "functions": [
+            {
+              "id": "func-lco-case-entry",
+              "title": "案件入催",
+              "description": "每日跑批时，将从贷款核心接收到的逾期客户名单加工为催收案件并落库。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "分案", "批处理"],
+              "documentLink": null
+            },
+            {
+              "id": "func-lco-case-auto-assign",
+              "title": "自动分案",
+              "description": "每日跑批时，根据预定义的分案规则，将催收案件自动分配到催收机构、小组、人员。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "分案", "自动化"],
+              "documentLink": null
+            },
+            {
+              "id": "func-lco-case-manual-assign",
+              "title": "手动分案",
+              "description": "手动选择并分配案件到指定的催收机构、小组、人员。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "分案", "手动"],
+              "documentLink": null
+            },
+            {
+              "id": "func-lco-case-exit",
+              "title": "案件出催",
+              "description": "每日跑批时，根据贷款核心发送的结清客户名单，将对应的催收案件关闭并清理相关数据。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "分案", "出催"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "催收作业平台",
+          "functions": [
+            {
+              "id": "func-lco-work-order-mgmt",
+              "title": "催收工单管理",
+              "description": "查询、分配、导出催收案件，查看案件详情，新增催收行动记录，管理客户画像等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "作业平台", "工单"],
+              "documentLink": null
+            },
+            {
+              "id": "func-lco-outbound-ops",
+              "title": "外呼作业",
+              "description": "1) 通过软电话，拨打客户电话进行催收作业 2) 通过消息通知服务，给客户手机发送催收短信。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "作业平台", "外呼"],
+              "documentLink": null
+            },
+            {
+              "id": "func-lco-case-suspension",
+              "title": "案件停催",
+              "description": "针对特殊情况客户（如多次投诉、敏感客群），在一段时间内暂停催收作业。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "作业平台", "停催"],
+              "documentLink": null
+            },
+            {
+              "id": "func-lco-performance-mgmt",
+              "title": "作业绩效管理",
+              "description": "通过催收报表系统，可查询各机构、催收员的作业统计数据、业绩数据及排行。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["清收", "作业平台", "绩效"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-data-management",
+      "name": "信贷数据管理",
+      "icon": "fas fa-analytics",
+      "description": "构建统一的信贷数据资产，提供数据分析与服务能力。",
+      "submodules": [
+        {
+          "name": "数据资产管理平台",
+          "functions": [
+            {
+              "id": "func-cdm-asset-directory",
+              "title": "数据资产管理",
+              "description": "支持信用卡数据资产（标准字段，库表字段，接口字段，标签指标）的定义、配置开发；规范业务字段、标签指标定义，确保同义同名，同名同义；提供配置化、组件化设计表、接口、标签指标，提升开发效率，提高业务响应度。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "资产", "规范"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-view",
+              "title": "数据资产视图管理",
+              "description": "面向不同角色提供视图管理功能；面向IT提供IT视图，侧重管理数据资产规范、有序、质量；面向业务提供应用定制化视图，方便业务基于应用场景管理数据资产。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "资产视图"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-version",
+              "title": "数据资产版本管理",
+              "description": "提供数据资产生命周期管理和版本管理功能；记录数据资产投产版本，管理数据资产生命周期，管控下游使用权限。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "版本管理"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-usage",
+              "title": "数据资产使用管理",
+              "description": "提供数据资产线上应用配置能力-向业务开放勾选数据资产并配置到某个应用场景使用的能力。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "使用管理"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-hotspot",
+              "title": "数据资产热点监控",
+              "description": "提供数据资产热点监控功能，监控使用情况-例如，监控标签在各个应用场景使用的最近TOPN热榜，使用频率趋势变化，方便业务调整营销用户标签体系。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "监控"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-lineage",
+              "title": "数据资产血缘分析",
+              "description": "分析数据资产变更关联影响-例如，接口字段改造，对上下游接口是否有影响，是否需要同步改造。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "血缘分析"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "数据分析平台",
+          "functions": [
+            {
+              "id": "func-cdm-analysis-source",
+              "title": "数据源管理接入",
+              "description": "支持多数据源的统一接入与管理，确保业务数据的实时同步与报表数据的集中存储与查询。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "分析平台"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-analysis-dashboard",
+              "title": "数据看板与邮件报告发送",
+              "description": "提供动态数据看板展示关键指标，并支持定时邮件发送定制化报告，便于业务团队及时监控。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "看板"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-analysis-metrics",
+              "title": "报告指标管理",
+              "description": "灵活配置产品的指标数据（如逾期率、审批通过率等等），满足不同部门不同场景的分析需求。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "指标"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-analysis-visualization",
+              "title": "可视化报告分析配置",
+              "description": "通过拖拽式工具快速生成交互式可视化报告，直观呈现业务趋势与绩效数据，包括不限于柱状图、饼状图、图标、文字报表、漏斗图、数据地图、用户行为分析等等。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "可视化"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-business-monitoring",
+      "name": "信贷业务监控",
+      "icon": "fas fa-tv",
+      "description": "提供信贷业务全景监控仪表盘。",
+      "submodules": [
+      {
+          "name": "信贷监控仪表盘",
+          "functions": [
+            {
+              "id": "func-cbm-scale-monitoring",
+              "title": "贷款规模监控",
+              "description": "贷款规模风险异动，风险聚集、监控和预警。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["监控", "规模", "预警"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cbm-customer-monitoring",
+              "title": "客户规模监控",
+              "description": "从客户相关参数角度监控业务规模。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["监控", "客户"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cbm-transaction-monitoring",
+              "title": "交易指标监控",
+              "description": "从交易相关参数角度监控业务规模。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["监控", "交易", "指标"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cbm-exception-monitoring",
+              "title": "异常指标监控",
+              "description": "监控产品异常。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["监控", "异常", "指标"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outbound-robot",
+      "name": "外呼机器人",
+      "icon": "fas fa-robot",
+      "description": "提供智能外呼能力，支持营销和催收场景。",
+      "submodules": [
+      {
+          "name": "外呼机器人",
+          "functions": [
+            {
+              "id": "func-or-work-order-mgmt",
+              "title": "外呼工单管理",
+              "description": "工单进件、拨打调度，结论输出，标注质检等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "工单", "调度"],
+              "documentLink": null
+            },
+            {
+              "id": "func-or-carrier-integration",
+              "title": "运营商渠道对接",
+              "description": "管理对接的电信运营商、号码池等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "渠道", "运营商"],
+              "documentLink": null
+            },
+            {
+              "id": "func-or-strategy-mgmt",
+              "title": "自动外呼策略管理",
+              "description": "外呼机器人的配置与审批、调度并发参数的配置与审批等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "策略管理"],
+              "documentLink": null
+            },
+            {
+              "id": "func-or-decision-tree",
+              "title": "会话决策树管理",
+              "description": "对话流程的配置与审批。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "决策树", "对话流"],
+              "documentLink": null
+            },
+            {
+              "id": "func-or-asr-model",
+              "title": "ASR模型管理",
+              "description": "管理维护ASR（Automatic Speech Recognition）模型，用于将语音转换为文字。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "ASR", "模型"],
+              "documentLink": null
+            },
+            {
+              "id": "func-or-nlu-model",
+              "title": "NLU模型管理",
+              "description": "管理维护NLU（自然语言理解）模型，用于理解文本内容的语义、生成回复文本。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "NLU", "模型"],
+              "documentLink": null
+            },
+            {
+              "id": "func-or-tts-model",
+              "title": "TTS模型管理",
+              "description": "管理维护TTS（文字转语音）模型，支持多种语言、方言。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["外呼", "TTS", "模型"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loan-document-management",
+      "name": "贷款资料管理",
+      "icon": "fas fa-folder-open",
+      "description": "统一管理贷款申请、审批和存续期间的各类影像和文档资料。",
+      "submodules": [
+      {
+          "name": "信贷资料录入平台",
+          "functions": [
+            {
+              "id": "func-ldm-entry-unstructured",
+              "title": "非结构化信息录入",
+              "description": "支持单录、双录模式让操作任务去录入非结构化文件数据, 保障录入信息的准确性。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["资料录入", "非结构化"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-entry-escalation",
+              "title": "疑难件升级和管理",
+              "description": "针对不清晰的工单进行升级成疑难件, 有更有专业经验的操作人员进行处理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["资料录入", "疑难件"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-entry-work-order",
+              "title": "录入工单管理",
+              "description": "管理处理中和处理完成的工单, 查看录入的信息以及录入的操作人。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["资料录入", "工单管理"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "电子文书平台",
+          "functions": [
+            {
+              "id": "func-ldm-edoc-template",
+              "title": "模板管理",
+              "description": "管理各类电子印章模板, 查询各类印章模板。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "模板"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-synthesis",
+              "title": "文书合成",
+              "description": "动态模版合成、批量模版合成、PDF模版合成、PDF表单合成（pdfXFA）、标准模版合成-身份证合成、CDN模板、Excel模板、PDF合并模板、Word模板合成。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "合成"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-ops",
+              "title": "运营管理",
+              "description": "签章配置、文书模版配置、文稿配置、文书模版配置/动态模版。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "运营"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-processing",
+              "title": "文书加工",
+              "description": "加水印、解水印、编辑文书（高亮/填充）、文档加密、META数据解析、PDF转图片、PDF压缩、PDF 2 DATA（结合机器学习，智能PDF内容解析）。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "加工", "PDF"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-verification",
+              "title": "防伪查询",
+              "description": "支持ESM签章验证、ESEAL签章验证、ESS签章验证、验签门户、第三方签章验证。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "防伪", "验签"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "信贷档案管理",
+          "functions": [
+            {
+              "id": "func-ldm-archive-classification",
+              "title": "档案分类管理",
+              "description": "合同、影像件等存档分类管理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["档案管理", "分类"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ldm-archive-storage",
+              "title": "档案存档",
+              "description": "各类合同、影像件数据通过大数据任务方式将数据进行离线存储存档。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["档案管理", "存储"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,753 @@
+{
+  "id": "retail-deposit",
+  "name": "零售存款",
+  "icon": "fas fa-piggy-bank",
+  "description": "为个人客户提供全面的存款服务，包括活期存款、定期存款、储蓄存款等多种产品类型。",
+  "overview": {
+    "summary": "零售存款产品提供全面的个人存款服务解决方案，涵盖账户管理、产品配置、支付结算、风险控制和数据分析等全生命周期功能。",
+    "stats": [],
+    "coreFeatures": []
+  },
+  "modules": [
+    {
+      "id": "retail-deposit-core",
+      "name": "零售存款核心",
+      "icon": "fas fa-database",
+      "description": "提供存款业务核心功能，包括账户管理、产品管理、利率管理、交易处理等核心能力。",
+      "submodules": [
+        {
+          "name": "账户管理",
+          "functions": [
+            {
+              "id": "func-rdc-account-lifecycle",
+              "title": "账户全生命周期管理",
+              "description": "银行客户账户的全生命周期管理，包括账户结构管理、开户、销户、信息维护、状态控制、权限设置及关联关系处理等核心功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户", "核心"], "documentLink": null
+            },
+            {
+              "id": "func-rdc-account-open",
+              "title": "客户开户",
+              "description": "支持个人客户开户，包括身份验证、信息录入等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户", "开户"], "documentLink": null
+            },
+            {
+              "id": "func-rdc-account-maintain",
+              "title": "客户信息维护",
+              "description": "支持客户基本信息修改、联系信息更新等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["账户", "信息维护"], "documentLink": null
+            },
+            {
+              "id": "func-rdc-account-status",
+              "title": "账户状态管理",
+              "description": "支持账户冻结、解冻、销户等状态变更操作。",
+              "version": "1.0", "status": "已上线", "tags": ["账户", "状态管理"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "产品管理",
+          "functions": [
+            {
+              "id": "func-rdc-product-lifecycle",
+              "title": "产品全生命周期管理",
+              "description": "负责存款产品的全生命周期管理，实现产品的标准化管理，支持活期产品和定期产品，包括产品设计、参数配置、上下架控制等。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "核心"], "documentLink": null
+            },
+            {
+              "id": "func-rdc-product-config",
+              "title": "产品配置",
+              "description": "支持存款产品参数化配置，包括利率、期限、起存金额等。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "配置"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "利率管理",
+          "functions": [
+            {
+              "id": "func-rdc-interest-model",
+              "title": "利率模型管理",
+              "description": "支持客户差异化利率模型，分为挂牌利率、产品利率、客群定价利率、客户定价利率。",
+              "version": "1.0", "status": "已上线", "tags": ["利率", "定价"], "documentLink": null
+            },
+            {
+              "id": "func-rdc-interest-set",
+              "title": "利率设置",
+              "description": "支持客户差异化利率模型，分为挂牌利率、产品利率、客群定价利率、客户定价利率。",
+              "version": "1.0", "status": "已上线", "tags": ["利率", "设置"], "documentLink": null
+            },
+            {
+              "id": "func-rdc-interest-adjust",
+              "title": "利率调整",
+              "description": "支持利率的动态调整和历史记录查询。",
+              "version": "1.0", "status": "已上线", "tags": ["利率", "调整"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "税管理",
+          "functions": [
+            {
+              "id": "func-rdc-tax-rules",
+              "title": "税务规则管理",
+              "description": "灵活支持税规则配置，包含计税规则和免税规则，自动化计税处理。",
+              "version": "1.0", "status": "已上线", "tags": ["税务", "自动化"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "费用管理",
+          "functions": [
+            {
+              "id": "func-rdc-fee-rules",
+              "title": "费用规则管理",
+              "description": "管理账户服务费、交易手续费等费用规则的配置、自动化计收及差错处理流程。",
+              "version": "1.0", "status": "已上线", "tags": ["费用", "自动化"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "交易限制",
+          "functions": [
+            {
+              "id": "func-rdc-transaction-limits",
+              "title": "多层级交易控制",
+              "description": "支持客户、账户、卡多层级账户管控和交易控制，支持账户冻结，支持根据渠道、产品、交易场景多维度交易限制。",
+              "version": "1.0", "status": "已上线", "tags": ["风控", "交易控制"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "交易处理",
+          "functions": [
+            {
+              "id": "func-rdc-transaction-processing",
+              "title": "核心交易处理",
+              "description": "完成存款业务核心交易处理，包括存取款、转账、冲正等操作，确保账务实时准确。",
+              "version": "1.0", "status": "已上线", "tags": ["交易", "核心"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "查询",
+          "functions": [
+            {
+              "id": "func-rdc-query-service",
+              "title": "多维度查询服务",
+              "description": "提供账户余额、交易流水、产品详情等多维度查询服务，支持实时和历史数据检索。",
+              "version": "1.0", "status": "已上线", "tags": ["查询"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "内部户管理",
+          "functions": [
+            {
+              "id": "func-rdc-internal-accounts",
+              "title": "内部户体系管理",
+              "description": "存款系统内为方便外围系统进行账务结算或清算处理，设置内部户体系。",
+              "version": "1.0", "status": "已上线", "tags": ["账务", "清算"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "会计核算",
+          "functions": [
+            {
+              "id": "func-rdc-accounting",
+              "title": "全业务场景账务处理",
+              "description": "实现全业务场景的账务处理、科目平衡校验、日终批处理及监管报表自动化生成。",
+              "version": "1.0", "status": "已上线", "tags": ["财务", "会计"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "文件批量",
+          "functions": [
+            {
+              "id": "func-rdc-batch-processing",
+              "title": "批量文件处理",
+              "description": "提供存款核心联机对账文件、批扣文件批量处理能力。",
+              "version": "1.0", "status": "已上线", "tags": ["批量", "文件处理"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retail-deposit-product",
+      "name": "零售存款产品",
+      "icon": "fas fa-cubes",
+      "description": "提供存款产品的设计、配置和管理功能，支持灵活的产品工厂模式。",
+      "submodules": [
+        {
+          "name": "零售存款产品工厂",
+          "functions": [
+            {
+              "id": "func-rdp-product-template",
+              "title": "产品模板管理",
+              "description": "维护标准化存款产品模板库，支持利率结构/期限规则/计息方式等参数化配置，实现新产品快速组合发布。",
+              "version": "1.0", "status": "已上线", "tags": ["产品工厂", "模板"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-product-management",
+              "title": "产品管理",
+              "description": "存款产品创建、维护、发布。产品包含账户结构、存款协议、开销变规则。",
+              "version": "1.0", "status": "已上线", "tags": ["产品工厂", "管理"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-param-management",
+              "title": "参数管理",
+              "description": "支持公共参数以及产品参数的增删改查以及配置导出，包括但不限于币种、开户机构、开户渠道和存款利率等。",
+              "version": "1.0", "status": "已上线", "tags": ["产品工厂", "参数"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-agreement-management",
+              "title": "协议管理",
+              "description": "存款协议查询、维护、发布。存款协议包含息费税规则。",
+              "version": "1.0", "status": "已上线", "tags": ["产品工厂", "协议"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-extension-feature",
+              "title": "扩展功能",
+              "description": "支持对各模块的自定义字段进行新增、删除和查询。字段归属模块指该字段的使用范围，模块包括：客户、账户、子账户、产品和协议。",
+              "version": "1.0", "status": "已上线", "tags": ["产品工厂", "扩展"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-simulator",
+              "title": "模拟器",
+              "description": "内置产品收益试算引擎与沙盒测试环境，支持利率敏感性分析、现金流模拟及监管报备数据预生成。",
+              "version": "1.0", "status": "已上线", "tags": ["产品工厂", "模拟器"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "零售存款产品中台",
+          "functions": [
+            {
+              "id": "func-rdp-process-template",
+              "title": "业务流程模板",
+              "description": "提供开户、销户、转账、账户状态查询等流程模板。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "流程"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-workorder-management",
+              "title": "工单管理",
+              "description": "实现存款业务全流程工单（开户/变更/转账等）管理。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "工单"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-business-security",
+              "title": "业务安全",
+              "description": "提供交易防重、业务频次管理等通用组件。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "安全"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-customer-agreement",
+              "title": "客户协议管理",
+              "description": "客户协议配置，客户协议查询、变更。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "协议"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-deposit-certificate",
+              "title": "存款证明",
+              "description": "生成标准化电子存款证明文件，需集成本地电子签章，支持线上即时下载。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "证明"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-message-notification",
+              "title": "消息通知",
+              "description": "基于事件驱动架构触发多渠道通知，配置消息模板与发送规则。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "通知"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-product-shelf",
+              "title": "产品货架",
+              "description": "维护存款产品多维标签体系，实现产品智能推荐、渠道差异定价与区域性销售策略灵活配置。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "货架"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-custom-form",
+              "title": "自定义表单",
+              "description": "低代码组件，提供配置化自定义表单，提供增删改查服务，流程变更时不需要变更代码快速迭代。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "低代码"], "documentLink": null
+            },
+            {
+              "id": "func-rdp-gray-management",
+              "title": "灰度管理",
+              "description": "业务功能发布流量分级策略组件，支持AB测试、异常熔断及版本快速回滚，保障业务平滑迭代。",
+              "version": "1.0", "status": "已上线", "tags": ["中台", "灰度发布"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "payment",
+      "name": "支付",
+      "icon": "fas fa-money-check-alt",
+      "description": "提供全面的支付解决方案，包括统一支付和SWIFT国际支付服务。",
+      "submodules": [
+        {
+          "name": "统一支付",
+          "functions": [
+            {
+              "id": "func-payment-channel-config",
+              "title": "渠道配置",
+              "description": "管理支付渠道接入参数、协议转换及通道健康度维护，支持银行/第三方支付等多渠道动态扩展与熔断切换。",
+              "version": "1.0", "status": "已上线", "tags": ["支付", "渠道"], "documentLink": null
+            },
+            {
+              "id": "func-payment-product-config",
+              "title": "产品配置",
+              "description": "定义支付产品基础属性（费率/限额/适用场景），实现产品快速接入。",
+              "version": "1.0", "status": "已上线", "tags": ["支付", "产品"], "documentLink": null
+            },
+            {
+              "id": "func-payment-strategy-config",
+              "title": "策略配置",
+              "description": "制定智能路由策略（成本/成功率优先）、风控规则及资金归集策略，动态优化支付链路选择。",
+              "version": "1.0", "status": "已上线", "tags": ["支付", "策略"], "documentLink": null
+            },
+            {
+              "id": "func-payment-transaction-engine",
+              "title": "交易引擎",
+              "description": "执行支付请求的协议解析、路由分发、交易状态机控制及异常处理，保障高并发支付交易原子性操作。",
+              "version": "1.0", "status": "已上线", "tags": ["支付", "引擎"], "documentLink": null
+            },
+            {
+              "id": "func-payment-monitoring",
+              "title": "监控",
+              "description": "实时追踪交易成功率、响应时长、渠道负载等关键指标，配置阈值告警与熔断降级机制。",
+              "version": "1.0", "status": "已上线", "tags": ["支付", "监控"], "documentLink": null
+            },
+            {
+              "id": "func-payment-reconciliation",
+              "title": "对账",
+              "description": "自动化执行渠道对账、商户清分对账及差错处理。",
+              "version": "1.0", "status": "已上线", "tags": ["支付", "对账"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "SWIFT",
+          "functions": [
+            {
+              "id": "func-swift-position-management",
+              "title": "头寸管理",
+              "description": "本模块用于用户管理在进行清算业务时所持有的资金头寸。提供头寸申报、头寸占用、头寸使用情况查询、头寸监控、头寸调拨等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["SWIFT", "头寸"], "documentLink": null
+            },
+            {
+              "id": "func-swift-transaction-management",
+              "title": "事务管理",
+              "description": "提供对本行系统内、本行与对手金融机构之间发生的支付业务或SWIFT报文信息产生疑问、修改、撤销或确认的业务活动。",
+              "version": "1.0", "status": "已上线", "tags": ["SWIFT", "事务"], "documentLink": null
+            },
+            {
+              "id": "func-swift-message-management",
+              "title": "报文管理",
+              "description": "报文管理主要功能包括：报文解析、报文组报、报文制作、发报处理、收报处理、报文路由、报文查询、报文打印、报文统计。",
+              "version": "1.0", "status": "已上线", "tags": ["SWIFT", "报文"], "documentLink": null
+            },
+            {
+              "id": "func-swift-integration-management",
+              "title": "集成管理",
+              "description": "提供与关联系统的业务对接，对往报业务：接收行内业务系统发起的往报业务、进行处理后转发给报文平台对外发报；对来报业务：接收报文平台的来报业务、进行处理后转发给行内业务的系统。",
+              "version": "1.0", "status": "已上线", "tags": ["SWIFT", "集成"], "documentLink": null
+            },
+            {
+              "id": "func-swift-reconciliation-processing",
+              "title": "对账处理",
+              "description": "对账处理提供账户行对账单管理、账户行账单与清算业务来往账核对、对账结果查询、清算业务来往与核心系统账账务核对、与关联系统的报文收发核对。",
+              "version": "1.0", "status": "已上线", "tags": ["SWIFT", "对账"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "operation-management",
+      "name": "运营管理",
+      "icon": "fas fa-tasks",
+      "description": "负责存款业务的日常运营和流程管理，确保业务高效稳定运行。",
+      "submodules": [
+        {
+          "name": "存款核心柜面",
+          "functions": [
+            {
+              "id": "func-om-core-acct-trans",
+              "title": "账务交易",
+              "description": "处理存款账户资金收付的原子性操作，支持转账、冲账等核心交易类型。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "账务"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-acct-mgmt",
+              "title": "账户管理",
+              "description": "实现存款账户全生命周期管理（开户/销户/变更）。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "账户"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-query",
+              "title": "查询",
+              "description": "提供账户余额、交易流水、历史明细等实时查询功能，支持多条件组合检索与报表导出。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "查询"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-trans-control",
+              "title": "交易管控",
+              "description": "管控码维护、账户冻结、解冻、续冻。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "风控"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-limit-mgmt",
+              "title": "限额管理",
+              "description": "配置账户/客户层级的单日/单笔交易限额，支持渠道差异化限额策略与动态额度调整。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "限额"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-interest-mgmt",
+              "title": "利息管理",
+              "description": "利率变更，查询。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "利率"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-internal-acct",
+              "title": "内部户管理",
+              "description": "内部户开立、销户、查询。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "内部户"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-fee-mgmt",
+              "title": "费用管理",
+              "description": "定义账户管理费、交易手续费等收费规则，支持差异化费率配置与周期性自动扣收。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "费用"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-param-mgmt",
+              "title": "参数管理",
+              "description": "节假日日历维护等。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "参数"], "documentLink": null
+            },
+            {
+              "id": "func-om-core-teller-mgmt",
+              "title": "柜员管理",
+              "description": "控制柜员操作权限（角色/机构/业务范围）、密码策略及操作日志审计，构建安全权限矩阵。",
+              "version": "1.0", "status": "已上线", "tags": ["柜面", "权限"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "支付柜面",
+          "functions": [
+            {
+              "id": "func-om-payment-remit",
+              "title": "汇出业务",
+              "description": "柜员录入汇出相关信息并提交，查询汇出的相关信息。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "汇款"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-param",
+              "title": "参数管理",
+              "description": "维护SWIFTBIC代码、RMA代码、账户行参数、GPI状态码等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "参数"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-transaction",
+              "title": "事务管理",
+              "description": "本功能用于查看对于汇出类报文发出的事务类报文的查询、发起和经办，包换199，195，196等报文。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "SWIFT"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-message",
+              "title": "报文管理",
+              "description": "本功能用于查看对于报文的原文的查询。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "报文"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-queue",
+              "title": "清算排队",
+              "description": "本功能用于查看对于汇出类报文因某种原因落入排队队列，当条件重新满足的时候，点击重新处理。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "清算"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-exception",
+              "title": "异常管理",
+              "description": "本功能用于查看异常流水的详情。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "异常处理"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-gpi",
+              "title": "GPI管理",
+              "description": "本功能用于查看需要人工反馈的GPI汇款报文的详情。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "GPI"], "documentLink": null
+            },
+            {
+              "id": "func-om-payment-reconciliation",
+              "title": "对账管理",
+              "description": "对账查询和处理，包含对账单列表查询、对账来账报文列表、日期切换列表、对账单交易明细列表、平衡检查核对查询、对账单页列表、对账步骤列表、杂项查询、账户行差错列表、非终态订单列表。",
+              "version": "1.0", "status": "已上线", "tags": ["支付柜面", "对账"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "risk-management",
+      "name": "风险管理",
+      "icon": "fas fa-shield-alt",
+      "description": "提供存款业务相关的风险识别、评估、监控和控制功能，保障资金安全。",
+      "submodules": [
+        {
+          "name": "反欺诈",
+          "functions": [
+            {
+              "id": "func-rm-antifraud-strategy",
+              "title": "反欺诈策略管理",
+              "description": "反欺诈策略信息维护、反欺诈旁路策略维护、反欺诈策略变更记录详情。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "策略"], "documentLink": null
+            },
+            {
+              "id": "func-rm-antifraud-detection",
+              "title": "欺诈实时检测与识别",
+              "description": "反欺诈服务管理，提供反欺诈决策服务，拦截高风险的欺诈行为。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "实时监测"], "documentLink": null
+            },
+            {
+              "id": "func-rm-antifraud-validation",
+              "title": "欺诈策略变更验证管理",
+              "description": "策略旁路验证，策略ABTest。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "A/B测试"], "documentLink": null
+            },
+            {
+              "id": "func-rm-antifraud-metrics",
+              "title": "指标计算",
+              "description": "提供通用准实时和T+1指标计算能力。",
+              "version": "1.0", "status": "已上线", "tags": ["反欺诈", "指标"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "黑名单",
+          "functions": [
+            {
+              "id": "func-rm-blacklist-management",
+              "title": "名单管理",
+              "description": "针对不同名单来源，如行外名单、行内名单进行新增、删除等管理操作。",
+              "version": "1.0", "status": "已上线", "tags": ["黑名单", "管理"], "documentLink": null
+            },
+            {
+              "id": "func-rm-blacklist-rules",
+              "title": "侦测规则管理",
+              "description": "针对不同的名单分组如：制裁名单、恐怖分子、红色通缉令等进行命中规则的配置，如：姓名、地址的匹配度以及条件的配置。",
+              "version": "1.0", "status": "已上线", "tags": ["黑名单", "规则"], "documentLink": null
+            },
+            {
+              "id": "func-rm-blacklist-search",
+              "title": "名单检索",
+              "description": "提供不同维度如：名称、地址、国家、账号、证件信息以及备注、附言等字符串进行名单检索。",
+              "version": "1.0", "status": "已上线", "tags": ["黑名单", "检索"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "foreign-exchange",
+      "name": "外汇",
+      "icon": "fas fa-globe",
+      "description": "支持多币种存款、结售汇及外汇交易相关的功能。",
+      "submodules": [
+        {
+          "name": "报价引擎",
+          "functions": [
+            {
+              "id": "func-fx-quote-sourcing",
+              "title": "渠道、数据及价源接入",
+              "description": "负责对外部行情、价格等信息源的接入。",
+              "version": "1.0", "status": "已上线", "tags": ["外汇", "报价"], "documentLink": null
+            },
+            {
+              "id": "func-fx-quote-management",
+              "title": "行情及价格管理",
+              "description": "负责对外部行情数据进行清洗、聚合，并将维护的价格数据向多渠道进行发送展示以支持交易。",
+              "version": "1.0", "status": "已上线", "tags": ["外汇", "行情"], "documentLink": null
+            },
+            {
+              "id": "func-fx-quote-spread",
+              "title": "点差管理",
+              "description": "根据价格策略，支持多维度的点差维护、可多面板灵活配置、启停。",
+              "version": "1.0", "status": "已上线", "tags": ["外汇", "点差"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "外汇交易",
+          "functions": [
+            {
+              "id": "func-fx-trade-management",
+              "title": "交易管理",
+              "description": "包含待客交易、内部交易及同业交易的记录及跟踪。",
+              "version": "1.0", "status": "已上线", "tags": ["外汇", "交易"], "documentLink": null
+            },
+            {
+              "id": "func-fx-trade-accounting",
+              "title": "账务管理",
+              "description": "处理外汇交易相关账务处理，并支持同渠道、核心对账。",
+              "version": "1.0", "status": "已上线", "tags": ["外汇", "账务"], "documentLink": null
+            },
+            {
+              "id": "func-fx-trade-reporting",
+              "title": "报表管理",
+              "description": "包含外汇交易产生的敞口、损益等内容的计算、展示及跟踪。",
+              "version": "1.0", "status": "已上线", "tags": ["外汇", "报表"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "finance",
+      "name": "财务",
+      "icon": "fas fa-calculator",
+      "description": "负责总账管理、会计核算及头寸管理等核心财务功能。",
+      "submodules": [
+        {
+          "name": "总账",
+          "functions": [
+            {
+              "id": "func-fin-gl-org",
+              "title": "组织管理",
+              "description": "此功能用于维护组织信息，对各个法人公司进行标准化、规范化管理。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "组织"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-ledger",
+              "title": "账套管理",
+              "description": "此功能用于维护账套信息，每个账套可按不同核算体系和核算要求独立记录所产生的会计凭证。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "账套"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-valueset",
+              "title": "值集管理",
+              "description": "此功能用于维护业务信息相关的值集字段信息，包含值集的定义和值集项的定义。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "值集"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-multidim",
+              "title": "多维度管理",
+              "description": "此功能用于维护账套的多维度总账的维度段信息通过灵活的多维度结构管理，可实现通过多维度查询核算数据需求以及满足总账下游系统的多维度统计分析需求。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "多维度"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-period",
+              "title": "期间管理",
+              "description": "此功能用于维护总账的会计期间设置，设置会计期间为了使会计报表使用者能够定期、及时地了解企业的财务状况和经营成果。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "期间"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-currency",
+              "title": "外币管理",
+              "description": "此功能用于维护总账的原币币种设置。系统功能支持对原币币种设置进行查询、新增、修改。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "外币"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-journal-entry",
+              "title": "日记账录入",
+              "description": "此功能用于对总账系统手工日记账的查询、查看、新增、修改、冲销、复制、删除、导入、导出等操作。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "日记账"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-journal-query",
+              "title": "日记账查询",
+              "description": "此功能用于总账系统日记账的查询、导出Excel、邮件Excel、导出pdf、邮件pdf。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "查询"], "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-report-query",
+              "title": "报表查询",
+              "description": "此功能用于业务状况表、资产负债表、利润表等基础报表的查询、导出、发送邮件。",
+              "version": "1.0", "status": "已上线", "tags": ["总账", "报表"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "头寸管理",
+          "functions": [
+            {
+              "id": "func-fin-pos-forecast",
+              "title": "流动性预测",
+              "description": "基于历史数据和业务场景建模，预测未来资金流入流出缺口。",
+              "version": "1.0", "status": "已上线", "tags": ["头寸", "预测"], "documentLink": null
+            },
+            {
+              "id": "func-fin-pos-monitor",
+              "title": "实时监测",
+              "description": "通过仪表盘实时追踪关键指标、大额交易动态及市场流动性变化，实现风险可视化监控。",
+              "version": "1.0", "status": "已上线", "tags": ["头寸", "监控"], "documentLink": null
+            },
+            {
+              "id": "func-fin-pos-alert",
+              "title": "头寸告警",
+              "description": "设置多层次阈值触发机制，对账户余额异常、期限错配超限等风险事件进行智能预警和分级推送。",
+              "version": "1.0", "status": "已上线", "tags": ["头寸", "告警"], "documentLink": null
+            },
+            {
+              "id": "func-fin-pos-control",
+              "title": "交易管控",
+              "description": "实施交易渠道限额管理、大额交易审批流控制及特殊时段的流动性保护机制，动态调节资金流动规模。",
+              "version": "1.0", "status": "已上线", "tags": ["头寸", "风控"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "data-management",
+      "name": "数据管理",
+      "icon": "fas fa-database",
+      "description": "提供统一的数据推送、数据仓库建模和指标管理能力。",
+      "submodules": [
+        {
+          "name": "推数平台",
+          "functions": [
+            {
+              "id": "func-data-push-mgmt",
+              "title": "推数管理",
+              "description": "推数平台支持不同数据库间导数功能，例如TDSL数据导数到Hive或TiDB。支持柜面参数配置化接入:支持通用数据校验保障数据质量;支持数据表拆分。",
+              "version": "1.0", "status": "已上线", "tags": ["数据", "推送"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "存款数据仓库",
+          "functions": [
+            {
+              "id": "func-data-dw-model",
+              "title": "标准模型",
+              "description": "构建统一数据规范，通过分层建模（ODS/DWD/DWS/ADS）实现业务主题域数据标准化，确保数据一致性、可复用性和扩展性。",
+              "version": "1.0", "status": "已上线", "tags": ["数仓", "建模"], "documentLink": null
+            },
+            {
+              "id": "func-data-dw-split",
+              "title": "数据拆分",
+              "description": "支持不同维度（产品、渠道）数据拆分，支持数据权限管理。",
+              "version": "1.0", "status": "已上线", "tags": ["数仓", "权限"], "documentLink": null
+            },
+            {
+              "id": "func-data-dw-metrics",
+              "title": "指标管理",
+              "description": "定义原子指标/派生指标的计算逻辑，支撑存款业务KPI统计与分析场景。",
+              "version": "1.0", "status": "已上线", "tags": ["数仓", "指标"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

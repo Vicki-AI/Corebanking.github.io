@@ -1,0 +1,187 @@
+{
+  "id": "corporate-loan",
+  "name": "对公贷款",
+  "icon": "fas fa-university",
+  "description": "为企业客户提供贷款、风险管理及资产处置等服务。",
+  "overview": {
+    "summary": "提供覆盖客户管理、授信审批、合同、放款、还款、贷后及资产处置的全流程对公信贷解决方案，并通过统一额度与名单系统强化企业风险管控。"
+  },
+  "modules": [
+    {
+      "id": "corporate-loan-main",
+      "name": "对公贷款",
+      "icon": "fas fa-file-invoice-dollar",
+      "description": "负责对公贷款业务的核心流程管理，从客户准入到贷后管理的全过程支持。",
+      "submodules": [
+        {
+          "name": "对公线下贷款",
+          "functions": [
+            {
+              "id": "func-cl-cust-mgmt",
+              "title": "客户管理",
+              "description": "客户信息的录入和维护管理。",
+              "version": "1.0", "status": "已上线", "tags": ["客户管理"], "documentLink": null
+            },
+            {
+              "id": "func-cl-credit-apply",
+              "title": "授信申请及审批",
+              "description": "客户的的授信申请和审批管理。",
+              "version": "1.0", "status": "已上线", "tags": ["授信", "审批"], "documentLink": null
+            },
+            {
+              "id": "func-cl-contract-mgmt",
+              "title": "合同管理",
+              "description": "对公贷款业务流程中的合同管理。",
+              "version": "1.0", "status": "已上线", "tags": ["合同"], "documentLink": null
+            },
+            {
+              "id": "func-cl-drawdown-apply",
+              "title": "提款申请及审批",
+              "description": "对公贷款的放款申请和审批管理。",
+              "version": "1.0", "status": "已上线", "tags": ["放款", "审批"], "documentLink": null
+            },
+            {
+              "id": "func-cl-product-mgmt",
+              "title": "产品管理",
+              "description": "对公贷款核心系统产品管理等逻辑的处理。",
+              "version": "1.0", "status": "已上线", "tags": ["产品管理"], "documentLink": null
+            },
+            {
+              "id": "func-cl-iou-mgmt",
+              "title": "借据管理",
+              "description": "对公贷款业务借据管理逻辑处理。",
+              "version": "1.0", "status": "已上线", "tags": ["借据"], "documentLink": null
+            },
+            {
+              "id": "func-cl-accounting-mgmt",
+              "title": "核算管理",
+              "description": "负责对公贷款业务借据层账务处理，生成每笔借据对应明细账、分户账、总账信息等。",
+              "version": "1.0", "status": "已上线", "tags": ["核算", "账务"], "documentLink": null
+            },
+            {
+              "id": "func-cl-repayment-mgmt",
+              "title": "还款管理",
+              "description": "对公贷款借据的还款功能管理。",
+              "version": "1.0", "status": "已上线", "tags": ["还款"], "documentLink": null
+            },
+            {
+              "id": "func-cl-postloan-mgmt",
+              "title": "贷后管理",
+              "description": "对公贷款借据的贷后管理，包括：利息调整、核销管理等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["贷后"], "documentLink": null
+            },
+            {
+              "id": "func-cl-ops-mgmt",
+              "title": "运维管理",
+              "description": "负责对公贷款业务的版本发布、日常运维问题排查及续作操作等处理。",
+              "version": "1.0", "status": "已上线", "tags": ["运维"], "documentLink": null
+            },
+            {
+              "id": "func-cl-config-mgmt",
+              "title": "配置管理",
+              "description": "管理和配置系统的基本设置，包括标题维护、logo配置等。",
+              "version": "1.0", "status": "已上线", "tags": ["配置"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enterprise-risk",
+      "name": "企业风险",
+      "icon": "fas fa-exclamation-triangle",
+      "description": "提供针对企业客户的统一授信额度管理和风险名单监控能力。",
+      "submodules": [
+        {
+          "name": "统一授信额度管理",
+          "functions": [
+            {
+              "id": "func-er-limit-control",
+              "title": "额度管理与控制",
+              "description": "客户额度的下发、占用、释放、冲销。",
+              "version": "1.0", "status": "已上线", "tags": ["额度", "风控"], "documentLink": null
+            },
+            {
+              "id": "func-er-limit-info",
+              "title": "额度信息管理",
+              "description": "额度信息管理主要用于查询额度信息，查看客户授信额度、占用、余额等信息。",
+              "version": "1.0", "status": "已上线", "tags": ["额度", "查询"], "documentLink": null
+            },
+            {
+              "id": "func-er-limit-status",
+              "title": "额度状态管理",
+              "description": "可查询额度信息，对额度进行冻结解冻终止操作，并对冻结解冻终止进行复核审批。",
+              "version": "1.0", "status": "已上线", "tags": ["额度", "状态管理"], "documentLink": null
+            },
+            {
+              "id": "func-er-limit-config",
+              "title": "配置管理",
+              "description": "授信产品和批量配置管理。",
+              "version": "1.0", "status": "已上线", "tags": ["额度", "配置"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "风险名单管理",
+          "functions": [
+            {
+              "id": "func-er-list-mgmt",
+              "title": "企业风险名单管理",
+              "description": "对公企业客户的黑名单查询、导入、编辑、删除等功能。",
+              "version": "1.0", "status": "已上线", "tags": ["名单", "黑名单"], "documentLink": null
+            },
+            {
+              "id": "func-er-list-query",
+              "title": "黑名单查询",
+              "description": "对公黑名单信息的查询。",
+              "version": "1.0", "status": "已上线", "tags": ["名单", "查询"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asset-disposal",
+      "name": "资产处置",
+      "icon": "fas fa-gavel",
+      "description": "提供逾期资产的催收作业和系统管理功能。",
+      "submodules": [
+        {
+          "name": "逾期催收作业",
+          "functions": [
+            {
+              "id": "func-ad-collection-mgmt",
+              "title": "催收管理",
+              "description": "催员可以查看分配给自己的案件详细信息，更新案件状态，添加备注，确保催收过程的透明和可追溯。",
+              "version": "1.0", "status": "已上线", "tags": ["催收", "案件管理"], "documentLink": null
+            },
+            {
+              "id": "func-ad-permission-mgmt",
+              "title": "权限管理",
+              "description": "控制用户对数据的访问和操作权限，如查看、编辑、删除等，确保数据的安全性和完整性；以及对系统接口的访问权限。",
+              "version": "1.0", "status": "已上线", "tags": ["催收", "权限"], "documentLink": null
+            },
+            {
+              "id": "func-ad-data-processing",
+              "title": "数据处理",
+              "description": "可以从多个数据源获取原始数据，并对数据行清洗、转换和聚合，确保数据的准确性和一致性。",
+              "version": "1.0", "status": "已上线", "tags": ["催收", "数据处理"], "documentLink": null
+            },
+            {
+              "id": "func-ad-reporting",
+              "title": "报表与分析",
+              "description": "生成各类报表，但不提供高级数据分析和可视化工具。用户可以将报表导出到Excel或其他分析工具进行进一步处理。",
+              "version": "1.0", "status": "已上线", "tags": ["催收", "报表"], "documentLink": null
+            },
+            {
+              "id": "func-ad-system-mgmt",
+              "title": "系统管理",
+              "description": "机构、分案组、用户等的管理。",
+              "version": "1.0", "status": "已上线", "tags": ["催收", "系统管理"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

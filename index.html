@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银行产品白皮书</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7f9;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 侧边栏导航 */
+        .sidebar {
+            width: 320px;
+            background: linear-gradient(to bottom, #1a4f8e, #2c6aa0);
+            color: white;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .logo {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* 搜索区域 */
+        .search-area {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-input {
+            flex: 1;
+            position: relative;
+        }
+        
+        .search-input input {
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            background: white;
+            color: #333;
+        }
+        
+        .search-input i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #718096;
+        }
+        
+        /* 导航菜单 */
+        .nav-menu {
+            padding: 10px 0;
+        }
+        
+        .nav-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-header {
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-header:hover { background-color: rgba(255, 255, 255, 0.05); }
+        .nav-header.active-product {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        
+        .nav-toggle { transition: transform 0.3s; }
+        
+        .nav-header.open .nav-toggle { transform: rotate(90deg); }
+        
+        .sub-nav {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .sub-nav.open { display: block; }
+        
+        .sub-nav-item {
+            padding: 10px 20px 10px 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        .sub-nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left-color: #ffc107;
+        }
+        
+        .sub-nav-item.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left-color: #ffc107;
+            font-weight: 500;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            flex: 1;
+            padding: 0;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c6aa0, #1a4f8e);
+            color: white;
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .header-content p {
+            opacity: 0.9;
+            max-width: 800px;
+            font-size: 0.95rem;
+        }
+        
+        .content { padding: 25px; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-overview, .module-content, .search-results {
+            display: none;
+        }
+
+        .product-overview.active, .module-content.active, .search-results.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* 概览页统计卡片样式 */
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            flex: 1;
+            min-width: 180px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            text-align: center;
+            border-top: 4px solid #4299e1;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        /* 模块内容 */
+        .module-header, .overview-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .module-header h2, .overview-header h2 {
+            font-size: 1.6rem;
+            color: #2c5282;
+            display: flex;
+            align-items: center;
+        }
+        
+        .module-header i, .overview-header i {
+            margin-right: 10px;
+            color: #2c6aa0;
+        }
+        
+        .module-header p, .overview-header p {
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .submodules { margin-top: 20px; }
+        
+        .submodule {
+            margin-bottom: 15px;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .submodule-header {
+            background: linear-gradient(to right, #f8fafc, #eef2f7);
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        
+        .submodule-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4a5568;
+        }
+        
+        .submodule-toggle {
+            font-size: 1.1rem;
+            color: #718096;
+            transition: transform 0.3s;
+        }
+        
+        .functions {
+            display: none;
+            background-color: #fafcfd;
+            padding: 15px;
+        }
+        
+        .function {
+            margin-bottom: 10px;
+            padding: 12px;
+            background-color: #f7fafc;
+            border-radius: 5px;
+            border-left: 4px solid #a0aec0;
+            transition: all 0.2s;
+        }
+        
+        .function:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left-color: #4299e1;
+        }
+        
+        .function-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .function-title {
+            font-weight: 500;
+            color: #2d3748;
+            font-size: 1rem;
+        }
+
+        .function-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .function-meta .doc-link {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .function-meta .doc-link:hover { text-decoration: underline; }
+        
+        .function-meta .version {
+            background-color: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+        
+        .function-meta .status {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+            color: white;
+            text-transform: capitalize;
+        }
+        .status-已上线 { background-color: #48bb78; }
+        .status-开发中 { background-color: #4299e1; }
+        .status-规划中 { background-color: #a0aec0; }
+        
+        .function-desc {
+            color: #718096;
+            font-size: 0.9rem;
+            padding-left: 4px;
+        }
+
+        .function-tags {
+            margin-top: 8px;
+            padding-left: 4px;
+        }
+
+        .function-tags .tag {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #718096;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .submodule.active > .functions {
+            display: block;
+        }
+
+        .submodule.active .submodule-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* 搜索结果样式 */
+        .search-results .result-item {
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #4299e1;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .search-results .result-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        .search-results .result-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2d3748;
+        }
+        .search-results .result-breadcrumb {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 8px;
+        }
+        .search-results .result-desc {
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+        .search-results .highlight {
+            background-color: #ffeb3b;
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .container { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .main-content { height: auto; }
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 15px 20px; }
+            .header-content h1 { font-size: 1.5rem; }
+            .search-box { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 侧边栏导航 -->
+        <div class="sidebar">
+            <div class="logo" id="homeButton">
+                <h1 id="docTitle"></h1>
+                <p id="docSubtitle"></p>
+            </div>
+            
+            <div class="search-area">
+                <div class="search-box">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="globalSearch" placeholder="输入功能名称或描述...">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu"></div> 
+        </div>
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <div class="header">
+                <div class="header-content">
+                    <h1 id="bannerTitle"></h1>
+                    <p id="bannerDescription"></p>
+                </div>
+            </div>
+            
+            <div class="content" id="contentArea">
+                <div id="productOverview" class="product-overview"></div>
+                <div id="moduleContent" class="module-content"></div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript 逻辑 -->
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                let mainConfig = {};
+                let productDetailsCache = {};
+                let allFunctions = [];
+
+                async function initializeWhitepaper() {
+                    try {
+                        const mainResponse = await fetch('main.json');
+                        if (!mainResponse.ok) throw new Error(`无法加载 main.json`);
+                        mainConfig = await mainResponse.json();
+                        
+                        const productPromises = mainConfig.products.map(p => getProductDetails(p.id));
+                        await Promise.all(productPromises);
+
+                        preprocessData();
+                        renderDocumentTitles();
+                        renderSidebarNav();
+                        renderGlobalOverview();
+
+                        bindEventListeners();
+                    } catch (error) {
+                        console.error('白皮书初始化失败:', error);
+                        document.getElementById('contentArea').innerHTML = `<p style="color: red; font-weight: bold;">内容加载失败！<br>请确保 'main.json' 和 'data' 文件夹及内容正确，并且您正在通过 Web 服务器访问此页面。</p>`;
+                    }
+                }
+
+                function preprocessData() {
+                    allFunctions = [];
+                    for (const productId in productDetailsCache) {
+                        const product = productDetailsCache[productId];
+                        (product.modules || []).forEach(module => {
+                            (module.submodules || []).forEach(submodule => {
+                                (submodule.functions || []).forEach(func => {
+                                    allFunctions.push({
+                                        ...func,
+                                        productId: product.id,
+                                        productName: product.name,
+                                        moduleId: module.id,
+                                        moduleName: module.name,
+                                        submoduleName: submodule.name
+                                    });
+                                });
+                            });
+                        });
+                    }
+                }
+
+                function renderDocumentTitles() {
+                    document.getElementById('docTitle').textContent = mainConfig.documentTitle;
+                    document.getElementById('docSubtitle').textContent = mainConfig.documentSubtitle;
+                }
+
+                function renderSidebarNav() {
+                    const navMenu = document.getElementById('navMenu');
+                    navMenu.innerHTML = '';
+                    mainConfig.products.forEach(product => {
+                        const navItem = document.createElement('div');
+                        navItem.className = 'nav-item';
+                        navItem.innerHTML = `
+                            <div class="nav-header" data-product-id="${product.id}">
+                                <div class="nav-title">
+                                    <i class="${product.icon || 'fas fa-box-open'}"></i>
+                                    <span>${product.name}</span>
+                                </div>
+                                <div class="nav-toggle"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                            <div class="sub-nav" id="${product.id}-subnav"></div>
+                        `;
+                        navMenu.appendChild(navItem);
+                    });
+                }
+                
+                async function getProductDetails(productId) {
+                    if (productDetailsCache[productId]) return productDetailsCache[productId];
+                    
+                    const productInfo = mainConfig.products.find(p => p.id === productId);
+                    if (!productInfo || !productInfo.dataFile) throw new Error(`找不到产品 ${productId} 的数据文件路径`);
+
+                    const response = await fetch(productInfo.dataFile);
+                    if (!response.ok) throw new Error(`无法加载 ${productInfo.dataFile}`);
+                    const details = await response.json();
+
+                    productDetailsCache[productId] = details;
+                    return details;
+                }
+
+                function clearActiveContent() {
+                    document.querySelectorAll('.product-overview, .module-content, .search-results').forEach(el => el.classList.remove('active'));
+                }
+
+                function calculateProductStats(product) {
+                    let modules = 0, submodules = 0, functions = 0;
+                    if (product.modules) {
+                        modules = product.modules.length;
+                        product.modules.forEach(module => {
+                            if (module.submodules) {
+                                submodules += module.submodules.length;
+                                module.submodules.forEach(submodule => {
+                                    functions += (submodule.functions || []).length;
+                                });
+                            }
+                        });
+                    }
+                    return { modules, submodules, functions, launchRate: '100%' };
+                }
+
+                function calculateGlobalStats() {
+                    const stats = { products: 0, modules: 0, submodules: 0, functions: 0 };
+                    stats.products = mainConfig.products.length;
+                    for (const productId in productDetailsCache) {
+                        const product = productDetailsCache[productId];
+                        const productStats = calculateProductStats(product);
+                        stats.modules += productStats.modules;
+                        stats.submodules += productStats.submodules;
+                        stats.functions += productStats.functions;
+                    }
+                    return stats;
+                }
+
+                function renderGlobalOverview() {
+                    clearActiveContent();
+                    const overviewContainer = document.getElementById('productOverview');
+                    overviewContainer.classList.add('active');
+
+                    document.getElementById('bannerTitle').textContent = mainConfig.globalOverview.title;
+                    document.getElementById('bannerDescription').textContent = mainConfig.globalOverview.summary;
+
+                    const stats = calculateGlobalStats();
+
+                    overviewContainer.innerHTML = `
+                        <div class="overview-header">
+                          <h2><i class="fas fa-sitemap"></i> ${mainConfig.globalOverview.statsTitle || '底座产品整体统计'}</h2>
+                        </div>
+                        <div class="stats">
+                            <div class="stat-card"><div class="stat-value">${stats.products}</div><div class="stat-label">产品线</div></div>
+                            <div class="stat-card"><div class="stat-value">${stats.modules}</div><div class="stat-label">核心模块</div></div>
+                            <div class="stat-card"><div class="stat-value">${stats.submodules}</div><div class="stat-label">子模块</div></div>
+                            <div class="stat-card"><div class="stat-value">${stats.functions}</div><div class="stat-label">功能点</div></div>
+                        </div>`;
+                    
+                    document.querySelectorAll('.nav-header.active-product, .sub-nav-item.active').forEach(el => el.classList.remove('active-product', 'active'));
+                }
+
+                async function loadAndRenderProductOverview(productId) {
+                    try {
+                        const product = await getProductDetails(productId);
+                        if (!product) return;
+                        
+                        const subNavContainer = document.getElementById(`${productId}-subnav`);
+                        let modulesHtml = '';
+                        (product.modules || []).forEach(module => {
+                            modulesHtml += `<div class="sub-nav-item" data-module-id="${module.id}" data-product-id="${productId}">${module.name}</div>`;
+                        });
+                        subNavContainer.innerHTML = modulesHtml;
+
+                        clearActiveContent();
+                        const overviewContainer = document.getElementById('productOverview');
+                        overviewContainer.classList.add('active');
+
+                        document.getElementById('bannerTitle').textContent = `${product.name} 产品能力`;
+                        document.getElementById('bannerDescription').textContent = product.overview?.summary ;
+
+                        const stats = calculateProductStats(product);
+
+                        overviewContainer.innerHTML = `
+                            <div class="overview-header">
+                              <h2><i class="${product.icon || 'fas fa-box-open'}"></i> ${product.name} 概览</h2>
+                              <p>${product.description}</p>
+                            </div>
+                            <div class="stats">
+                                <div class="stat-card"><div class="stat-value">${stats.modules}</div><div class="stat-label">核心模块</div></div>
+                                <div class="stat-card"><div class="stat-value">${stats.submodules}</div><div class="stat-label">子模块</div></div>
+                                <div class="stat-card"><div class="stat-value">${stats.functions}</div><div class="stat-label">功能点</div></div>
+                                <div class="stat-card"><div class="stat-value">${stats.launchRate}</div><div class="stat-label">上线率</div></div>
+                            </div>`;
+                    } catch (error) {
+                        console.error(`加载产品 ${productId} 详情失败:`, error);
+                    }
+                }
+
+                async function loadAndRenderModuleContent(productId, moduleId) {
+                     try {
+                        const product = await getProductDetails(productId);
+                        const module = (product.modules || []).find(m => m.id === moduleId);
+                        if (!module) return;
+
+                        clearActiveContent();
+                        const moduleContainer = document.getElementById('moduleContent');
+                        moduleContainer.classList.add('active');
+
+                        document.getElementById('bannerTitle').textContent = module.name;
+                        document.getElementById('bannerDescription').textContent = module.description || `(${product.name}下的核心功能模块)`;
+                        
+                        let contentHtml = `<div class="module-header"><h2><i class="${module.icon || 'fas fa-cogs'}"></i> ${module.name}</h2><p>${module.description || ''}</p></div><div class="submodules">`;
+                        
+                        (module.submodules || []).forEach(submodule => {
+                            let functionsHtml = '';
+                            (submodule.functions || []).forEach(func => {
+                                const tagsHtml = func.tags ? func.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+                                const linkHtml = func.documentLink ? `<a href="${func.documentLink}" target="_blank" class="doc-link" title="查看详细文档"><i class="fas fa-link"></i>文档</a>` : '';
+                                functionsHtml += `<div class="function" id="${func.id}"><div class="function-title-container"><div class="function-title">${func.title}</div><div class="function-meta">${linkHtml}<span class="version" title="版本号">v${func.version || '1.0'}</span><span class="status status-${(func.status || 'N/A').toLowerCase()}" title="状态">${func.status || 'N/A'}</span></div></div><div class="function-desc">${func.description}</div><div class="function-tags">${tagsHtml}</div></div>`;
+                            });
+                            contentHtml += `<div class="submodule"><div class="submodule-header"><div class="submodule-title">${submodule.name}</div><div class="submodule-toggle"><i class="fas fa-chevron-down"></i></div></div><div class="functions">${functionsHtml || '<div style="padding: 15px; color: #718096;">暂无详细功能点</div>'}</div></div>`;
+                        });
+                        contentHtml += `</div>`;
+                        moduleContainer.innerHTML = contentHtml;
+                     } catch (error) {
+                        console.error(`加载模块 ${moduleId} 详情失败:`, error);
+                     }
+                }
+
+                function renderSearchResults(searchTerm) {
+                    clearActiveContent();
+                    const searchContainer = document.getElementById('searchResults');
+                    searchContainer.classList.add('active');
+
+                    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+                    const results = allFunctions.filter(func => 
+                        func.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+                        func.description.toLowerCase().includes(lowerCaseSearchTerm)
+                    );
+                    
+                    document.getElementById('bannerTitle').textContent = "搜索结果";
+                    document.getElementById('bannerDescription').textContent = `为您找到关于 "${searchTerm}" 的 ${results.length} 个相关功能点。`;
+
+                    if (results.length === 0) {
+                        searchContainer.innerHTML = '<div>未找到匹配项。</div>';
+                        return;
+                    }
+
+                    const highlight = (text, term) => text.replace(new RegExp(term, 'gi'), match => `<span class="highlight">${match}</span>`);
+
+                    let resultsHtml = '';
+                    results.forEach(func => {
+                        resultsHtml += `
+                            <div class="result-item" data-func-id="${func.id}" data-module-id="${func.moduleId}">
+                                <div class="result-title">${highlight(func.title, searchTerm)}</div>
+                                <div class="result-breadcrumb">${func.productName} > ${func.moduleName} > ${func.submoduleName}</div>
+                                <div class="result-desc">${highlight(func.description, searchTerm)}</div>
+                            </div>
+                        `;
+                    });
+                    searchContainer.innerHTML = resultsHtml;
+                }
+
+                async function navigateToFunction(moduleId, funcId) {
+                    let productId;
+                    for (const pId in productDetailsCache) {
+                        const product = productDetailsCache[pId];
+                        if (product.modules.some(m => m.id === moduleId)) {
+                            productId = pId;
+                            break;
+                        }
+                    }
+
+                    if (!productId) return;
+
+                    await loadAndRenderModuleContent(productId, moduleId);
+                    
+                    document.querySelectorAll('.nav-header.active-product, .sub-nav-item.active').forEach(el => el.classList.remove('active-product', 'active'));
+                    const navHeader = document.querySelector(`.nav-header[data-product-id="${productId}"]`);
+                    const subNavItem = document.querySelector(`.sub-nav-item[data-module-id="${moduleId}"]`);
+                    if(navHeader) {
+                        navHeader.classList.add('active-product', 'open');
+                        navHeader.nextElementSibling.classList.add('open');
+                    }
+                    if(subNavItem) subNavItem.classList.add('active');
+
+                    setTimeout(() => {
+                        const funcElement = document.getElementById(funcId);
+                        if (funcElement) {
+                            const submodule = funcElement.closest('.submodule');
+                            if (submodule && !submodule.classList.contains('active')) {
+                                submodule.classList.add('active');
+                            }
+                            funcElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            funcElement.style.transition = 'background-color 0.5s ease';
+                            funcElement.style.backgroundColor = '#fff8e1';
+                            setTimeout(() => {
+                                funcElement.style.backgroundColor = '';
+                            }, 2000);
+                        }
+                    }, 100);
+                }
+
+                function bindEventListeners() {
+                    const navMenu = document.getElementById('navMenu');
+                    const contentArea = document.getElementById('contentArea');
+                    const searchInput = document.getElementById('globalSearch');
+                    const homeButton = document.getElementById('homeButton');
+
+                    homeButton.addEventListener('click', () => {
+                        renderGlobalOverview();
+                        document.querySelectorAll('.nav-header.open, .sub-nav.open').forEach(el => el.classList.remove('open'));
+                    });
+
+                    navMenu.addEventListener('click', async (event) => {
+                        const navHeader = event.target.closest('.nav-header');
+                        const subNavItem = event.target.closest('.sub-nav-item');
+
+                        if (navHeader) {
+                            const productId = navHeader.dataset.productId;
+                            const isAlreadyActive = navHeader.classList.contains('active-product');
+
+                            if (isAlreadyActive) {
+                                navHeader.classList.toggle('open');
+                                navHeader.nextElementSibling.classList.toggle('open');
+                                await loadAndRenderProductOverview(productId);
+                            } else {
+                                document.querySelectorAll('.nav-header.open, .sub-nav.open').forEach(el => el.classList.remove('open'));
+                                document.querySelectorAll('.nav-header.active-product').forEach(el => el.classList.remove('active-product'));
+                                
+                                await loadAndRenderProductOverview(productId);
+                                
+                                navHeader.classList.add('active-product', 'open');
+                                navHeader.nextElementSibling.classList.add('open');
+                            }
+
+                        } else if (subNavItem) {
+                            const productId = subNavItem.dataset.productId;
+                            const moduleId = subNavItem.dataset.moduleId;
+
+                            document.querySelectorAll('.sub-nav-item.active').forEach(el => el.classList.remove('active'));
+                            subNavItem.classList.add('active');
+                            
+                            await loadAndRenderModuleContent(productId, moduleId);
+                        }
+                    });
+                    
+                    contentArea.addEventListener('click', (event) => {
+                         const submoduleHeader = event.target.closest('.submodule-header');
+                         if (submoduleHeader) {
+                             submoduleHeader.parentElement.classList.toggle('active');
+                         }
+
+                         const resultItem = event.target.closest('.result-item');
+                         if(resultItem) {
+                            const {moduleId, funcId} = resultItem.dataset;
+                            navigateToFunction(moduleId, funcId);
+                         }
+                    });
+
+                    searchInput.addEventListener('keypress', (event) => {
+                        if (event.key === 'Enter') {
+                            const searchTerm = searchInput.value.trim();
+                            if(searchTerm) {
+                                renderSearchResults(searchTerm);
+                            }
+                        }
+                    });
+                }
+
+                initializeWhitepaper();
+            });
+        })();
+    </script>
+</body>
+</html>

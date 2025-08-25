@@ -1,0 +1,298 @@
+{
+  "id": "middleware",
+  "name": "中间件",
+  "icon": "fas fa-layer-group",
+  "description": "提供支撑所有业务线的通用技术平台和组件。",
+  "overview": {
+    "summary": "提供一套金融级、云原生的基础架构中间件工具组，以“轻量化微服务+智能化治理+弹性基础设施”为核心，助力全系列业务系统高效开发及运维。"
+  },
+  "modules": [
+    {
+      "id": "mw-wecube",
+      "name": "Wecube",
+      "icon": "fas fa-cubes",
+      "description": "企业级IT运营管理套件，提供从资源管理到流程编排的全栈能力。",
+      "submodules": [
+        {
+          "name": "Platform",
+          "functions": [
+            {
+              "id": "func-mw-wecube-platform",
+              "title": "无代码流程编排引擎",
+              "description": "面向IT运营管理（ITOM）领域的无代码流程自动化平台，通过可视化编排引擎实现企业级IT服务全生命周期管理。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "流程编排", "无代码"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WeCMDB",
+          "functions": [
+            {
+              "id": "func-mw-wecube-cmdb",
+              "title": "数据资源管理",
+              "description": "企业级IT基础设施的统一管理和配置数据建模。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "CMDB"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Monitor",
+          "functions": [
+            {
+              "id": "func-mw-wecube-monitor",
+              "title": "监控与告警管理",
+              "description": "自动化集成交付系统流程，自动创建监控指标、告警、看板，实现即开即用。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "监控"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Artifacts",
+          "functions": [
+            {
+              "id": "func-mw-wecube-artifacts",
+              "title": "Ops发布应用管理",
+              "description": "支持多种灰度、特殊物料包的发布自动化，简化发布流程。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "发布", "DevOps"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "ITSM",
+          "functions": [
+            {
+              "id": "func-mw-wecube-itsm",
+              "title": "自动化流程管理",
+              "description": "提供丰富的自定义表单生态，打通自动化流程编排，灵活配置工作流。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "ITSM"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Terminal",
+          "functions": [
+            {
+              "id": "func-mw-wecube-terminal",
+              "title": "远程终端管理",
+              "description": "提供全面的远程服务器管理解决方案。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "运维"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "functions": [
+            {
+              "id": "func-mw-wecube-k8s",
+              "title": "容器集群管理",
+              "description": "提供基于Kubernetes的集群管理，支持模型注册，应用部署，多K8S集群管理，事件监听等。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "Kubernetes", "容器"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "IT&OM最佳实践",
+          "functions": [
+            {
+              "id": "func-mw-wecube-best-practice",
+              "title": "IT&OM最佳实践",
+              "description": "提供一个高效的多云环境、一键迁移应用解决方案。",
+              "version": "1.0", "status": "已上线", "tags": ["Wecube", "多云"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-monitoring",
+      "name": "智能监控",
+      "icon": "fas fa-desktop",
+      "description": "基于AIOps理念的智能运维平台，提供全面的可观测性与精准告警能力。",
+      "submodules": [
+        {
+          "name": "AIOPS",
+          "functions": [
+            {
+              "id": "func-mw-aiops",
+              "title": "智能运维平台",
+              "description": "AIOPS智能运维平台，提供自动化免配置的采集计算和标准监控协议接入。具备应用性能和业务监控的可观测能力，提供指挥调度投屏等运行状态可视化展示。具备指标、日志和交易追踪的关联分析，集成异常堆栈以及SQL语句查看，实现异常和告警的精准定位。支持组合阈值、推荐阈值和AI算法检测等智能化告警能力。",
+              "version": "1.0", "status": "已上线", "tags": ["AIOps", "监控", "可观测性"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-waas",
+      "name": "WAAS",
+      "icon": "fas fa-cogs",
+      "description": "企业级流程编排服务，赋能业务人员自主搭建端到端工作流。",
+      "submodules": [
+        {
+          "name": "WAAS",
+          "functions": [
+            {
+              "id": "func-mw-waas",
+              "title": "企业级流程编排服务",
+              "description": "WAAS（Workflow as a Service）是企业级流程编排服务，通过将复杂业务解耦为可复用的原子化组件，结合拖拽式流程引擎、规则配置面板、预置行业模板库等，赋能业务人员自主搭建端到端工作流，实现新业务上线周期从周级缩短至小时级。",
+              "version": "1.0", "status": "已上线", "tags": ["WAAS", "工作流", "低代码"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-masa",
+      "name": "MASA",
+      "icon": "fas fa-project-diagram",
+      "description": "金融级云原生微服务平台，提供智能化治理和弹性基础设施。",
+      "submodules": [
+        {
+          "name": "WEAPM",
+          "functions": [
+            {
+              "id": "func-mw-masa-weapm",
+              "title": "通用可观测平台",
+              "description": "Tracing/Logging查询与分析。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "可观测性"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WEMQ",
+          "functions": [
+            {
+              "id": "func-mw-masa-wemq",
+              "title": "分布式消息队列",
+              "description": "消息存储转发。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "消息队列"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WEREDIS",
+          "functions": [
+            {
+              "id": "func-mw-masa-weredis",
+              "title": "通用高速缓存服务",
+              "description": "WeRedis是基于开源redis开发的分布式缓存平台，支持子系统级别的资源控制及访问鉴权，主动屏蔽高危运维命令及风险高的访问。采用多集群跨IDC部署架构，可在线扩缩容，使底层小集群达到更高的扩展性。提供智能分析报告及预警，精细化运营。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "缓存", "Redis"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WESGS",
+          "functions": [
+            {
+              "id": "func-mw-masa-wesgs",
+              "title": "服务治理",
+              "description": "服务ID、部署区域、请求响应管理。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "服务治理"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "RMB",
+          "functions": [
+            {
+              "id": "func-mw-masa-rmb",
+              "title": "可靠消息总线",
+              "description": "同步、异步调用接入。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "消息总线"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "MASA",
+          "functions": [
+            {
+              "id": "func-mw-masa-platform",
+              "title": "云原生微服务平台",
+              "description": "MASA（Modern Application and Service Architecture） 是一套金融级基于云原生的基础架构中间件工具组，以“轻量化微服务+智能化治理+弹性基础设施”三位一体架构为核心，提供 服务网格、 事件网格、统一可观测性平台等组件，助力全系列业务系统高效开发及运维。支持同城/异地多活部署，智能流量调度，保障服务SLA达99.999%。可兼容常见传统微服务框架、企业服务总线（ESB)，实现集中式架构向分布式系统的平滑迁移。也可实现跨云环境无缝迁移 ，提升资源利用率和运维自动化，全栈技术自主可控。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "微服务", "云原生"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "GNS",
+          "functions": [
+            {
+              "id": "func-mw-masa-gns",
+              "title": "全局服务定位系统",
+              "description": "为应用系统提供DCN定位服务。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "服务发现"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WELB",
+          "functions": [
+            {
+              "id": "func-mw-masa-welb",
+              "title": "通用负载均衡管理系统",
+              "description": "负载均衡插件适配。",
+              "version": "1.0", "status": "已上线", "tags": ["MASA", "负载均衡"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-tech-platform",
+      "name": "技术平台",
+      "icon": "fas fa-server",
+      "description": "提供基础公共能力，服务于各个业务系统。",
+      "submodules": [
+        {
+          "name": "FPS",
+          "functions": [
+            {
+              "id": "func-mw-fps",
+              "title": "文件处理",
+              "description": "FPS文件处理系统，作为基础公共能力，主要服务于各个业务系统的文件存储平台。",
+              "version": "1.0", "status": "已上线", "tags": ["文件服务"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-customer-account",
+      "name": "客户&账户系统",
+      "icon": "fas fa-users-cog",
+      "description": "提供集中、统一、共享的单一客户视图。",
+      "submodules": [
+        {
+          "name": "ECIF",
+          "functions": [
+            {
+              "id": "func-mw-ecif",
+              "title": "客户信息系统",
+              "description": "ECIF系统是整合银行内部各个产品的客户信息，包括客户基本信息、账户、产品关系等，以提供集中、统一、共享和权威的单一客户视图，构建“以客户为中心”的运行与发展体系，为现有各业务系统提供功能支撑，提升客户服务体验和市场竞争力。",
+              "version": "1.0", "status": "已上线", "tags": ["ECIF", "客户信息"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-security-tools",
+      "name": "安全工具",
+      "icon": "fas fa-user-lock",
+      "description": "提供统一的用户身份认证和权限管理能力。",
+      "submodules": [
+        {
+          "name": "UM用户管理系统",
+          "functions": [
+            {
+              "id": "func-mw-um",
+              "title": "统一用户登录和权限管理平台",
+              "description": "统一的身份认证，支持多种登录协议，用户使用一个账号可以登录多个系统；统一的权限管理和权限上报，保证统一权限策略，比如统一权限申请，自动清理离职用户的权限。",
+              "version": "1.0", "status": "已上线", "tags": ["安全", "权限管理", "IAM"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

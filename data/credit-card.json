@@ -1,0 +1,542 @@
+{
+  "id": "credit-card",
+  "name": "信用卡",
+  "icon": "fas fa-credit-card",
+  "description": "提供信用卡申请、账户管理、交易、风控等全方位服务。",
+  "overview": {
+    "summary": "提供覆盖客户、账户、额度、交易、分期、清算等全生命周期的高度可配置化信用卡核心产品能力，并支持主流卡组织的快速接入。"
+  },
+  "modules": [
+    {
+      "id": "credit-card-basic",
+      "name": "信用卡基础产品",
+      "icon": "fas fa-id-card",
+      "description": "包含信用卡的核心业务功能，如客户管理、账卡体系、卡组织接入等。",
+      "submodules": [
+        {
+          "name": "信用卡核心",
+          "functions": [
+            {
+              "id": "func-cc-core-cust-info",
+              "title": "客户信息管理",
+              "description": "提供客户信息维护功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "客户"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-lifecycle",
+              "title": "账卡生命周期管理",
+              "description": "提供多维度立体的面向不同业务场景的账卡体系。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "账户"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-billing",
+              "title": "计息和账单处理",
+              "description": "面向交易的计息机制，提供账单维护与查询功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "计息", "账单"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-limit",
+              "title": "额度服务",
+              "description": "网状额度管理体系。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "额度"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-installment",
+              "title": "分期服务",
+              "description": "提供多种分期方式和全生命周期的分期管理。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "分期"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-pricing",
+              "title": "定价服务",
+              "description": "全面的定价机制，基于余额对象层定价高度配置化。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "定价"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-accounting",
+              "title": "会计账处理",
+              "description": "提供总账与内部户记账和对账功能。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "会计"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-clearing",
+              "title": "清分清算",
+              "description": "支持批量清算与与差错处理。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "清算"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-params",
+              "title": "产品参数配置",
+              "description": "高度可配置的产品参数。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "配置"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-credit-reporting",
+              "title": "征信报送（可选）",
+              "description": "按监管要求上送信用卡使用情况、违约信息等。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "征信"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-bill-mgmt",
+              "title": "信用卡账单管理",
+              "description": "信用卡账单管理。",
+              "version": "1.0", "status": "已上线", "tags": ["核心", "账单"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "产品中心",
+          "functions": [
+            {
+              "id": "func-cc-prod-process",
+              "title": "产品流程管理",
+              "description": "涉及开户，放款，还款，非金融，运营等功能，开卡，借款支持流程编排。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "流程"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-agreement",
+              "title": "客户协议中心",
+              "description": "管理联机主动还款，批扣，来账，内管还款减免协议，达到精细化运营，目标提升回款率。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "协议"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-pricing",
+              "title": "定价中心",
+              "description": "管理产品定价，支持规则包和规则表等多种实现。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "定价"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-incoming",
+              "title": "来账中心",
+              "description": "支持来账入金，来账还款，支持客户级结清或者部分还。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "来账"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-style",
+              "title": "样式中心",
+              "description": "不同客群，标签或者指标的客户展示不同的前端样式。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "前端"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-contract",
+              "title": "产品合同管理",
+              "description": "管理不同产品在不同场景下的合同。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "合同"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-debit",
+              "title": "扣款中心",
+              "description": "进行对账文件，差错文件。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "扣款"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-reminder",
+              "title": "还款提醒",
+              "description": "账单日提醒、不良征信上报提醒等。",
+              "version": "1.0", "status": "已上线", "tags": ["产品", "提醒"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "卡组织接入",
+          "functions": [
+            {
+              "id": "func-cc-scheme-pre",
+              "title": "卡组织接入前置",
+              "description": "作为卡组织网络接入的前置，负责与卡组织保持长连接接收卡组织的联机交易和清算文件，包括ISO 8583、json、xml交易报文解析、交易识别、清算对账文件对接等。",
+              "version": "1.0", "status": "已上线", "tags": ["卡组织", "前置", "ISO8583"], "documentLink": null
+            },
+            {
+              "id": "func-cc-scheme-trans",
+              "title": "卡交易系统",
+              "description": "支持各种卡交易操作，包括余额查询， 消费，消费撤销，消费冲正，退货，预授权，预授权撤销，预授权完成（请求），预授权完成（请求）撤销，预授权完成通知，预授权冲正，预授权撤销冲正，预授权完成（请求）冲正。",
+              "version": "1.0", "status": "已上线", "tags": ["卡组织", "交易"], "documentLink": null
+            },
+            {
+              "id": "func-cc-scheme-dispute",
+              "title": "争议系统",
+              "description": "支持对已入账的交易进行实时查询，可以对有争议的交易进行建案、发起争议、预仲裁、仲裁等动作，对于争议交易进行挂账处理，还可以查看案件生命周期和轨迹，以及对应的争议费用和处理周期管理。",
+              "version": "1.0", "status": "已上线", "tags": ["卡组织", "争议", "仲裁"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "实体卡管理",
+          "functions": [
+            {
+              "id": "func-cc-card-media",
+              "title": "卡介质信息管理",
+              "description": "支持卡生命周期管理，包括卡号生成(特殊规则/靓号/尾号/连续号等)开卡，卡介质校验，卡密码修改，挂失，解冻，注销等操作。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["实体卡", "卡管"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-card-production",
+              "title": "制卡管理",
+              "description": "负责卡片的制作，制卡服务机构管理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["实体卡", "制卡"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "批扣中心",
+          "functions": [
+            {
+              "id": "func-cc-debit-agreement",
+              "title": "客户扣款协议管理",
+              "description": "进行卡列表查询、客户卡信息解绑等功能。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["批扣", "协议"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-debit-batch",
+              "title": "灵活批扣管理",
+              "description": "进行灵活的批扣决策及批扣、智能扣、日终对账、轻量化对账。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["批扣", "对账"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-debit-online",
+              "title": "联机动账基础能力",
+              "description": "提供联机动账能力,管理台账。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["批扣", "联机"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "信用卡账务运营平台",
+          "functions": [
+            {
+              "id": "func-cc-ops-balance-calc",
+              "title": "实时余额分配试算",
+              "description": "通过试算对象（卡号或产品代码）+还款日期试算还款日期当天实时余额及还款分配实时余额。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "试算"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-payoff-calc",
+              "title": "付清计算",
+              "description": "付清计算通过卡号+付清日期试算账户结清需要的金额。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "付清"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-unposted-trans",
+              "title": "未入账交易处理",
+              "description": "通过卡号查询客户名下未入账的交易信息。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "未入账"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-manual-entry",
+              "title": "还款/本金/费用/利息手工录入",
+              "description": "主要针对对应账户（还款/本金/费用/利息）多入账或者少入账的情况进行手工调整。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "手工调整"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-min-due-adjust",
+              "title": "最低应缴手工调整",
+              "description": "最低应缴手工调整是指对账户下的逾期周期的当前本期最低应付款手工调账。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "最低应缴"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-overpayment-transfer",
+              "title": "溢存款转出",
+              "description": "溢存款转出通过卡号或者证件类型+证件号查询客户账户的溢存款信息，并可对溢存款进行转出处理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "溢存款"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-exception-mgmt",
+              "title": "异常交易管理",
+              "description": "异常交易管理主要查询系统因非预期缺陷（比如网络故障）导致的异常交易信息。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["运营", "异常交易"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-card-risk",
+      "name": "信用卡风控",
+      "icon": "fas fa-shield-alt",
+      "submodules": [
+      {
+          "name": "审批平台",
+          "functions": [
+            {
+              "id": "func-ccr-approval-datasource",
+              "title": "外查征信数据源及变量衍生",
+              "description": "为了辅助风险自动化决策，往往需要接入外部数据源将其进行变量衍生加工，此模块及负责对接外部数据源厂商以及提供编写片段Python代码进行变量衍生的功能。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["风控", "审批", "数据源"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-strategy",
+              "title": "自动化审批策略管理",
+              "description": "支持基于experian策略包的发布、运行管理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["风控", "审批", "策略"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-process",
+              "title": "审批流程管理",
+              "description": "进行名单审批、欺诈审批、核身审批、调额调价等风险流程管理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["风控", "审批", "流程"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-scoring",
+              "title": "评分模型管理",
+              "description": "支持机器学习模型的验证和模型运行。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["风控", "审批", "模型"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-manual-review",
+              "title": "远程审核作业平台",
+              "description": "在线上自动化审批流程中，对高风险和难以自动判别风险的审批申请案件转人工审批，提供一站式的人工审批系统，包含自动外呼、导向式的问题库、人工视频照片的审核等等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["风控", "审批", "人工审核"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-inloan-decision",
+              "title": "贷中决策管理",
+              "description": "贷款发放后，批量对再贷客户、已开户未借款客户、静默客户等等进行贷中的风险决策，用于驱动额度的调整、风险等级的调整等等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["风控", "贷中决策"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "反欺诈平台",
+          "functions": [
+            {
+              "id": "func-ccr-antifraud-datasource",
+              "title": "外查征信数据源及变量衍生",
+              "description": "为了辅助风险自动化决策，往往需要接入外部数据源将其进行变量衍生加工，此模块及负责对接外部数据源厂商以及提供编写片段Python代码进行变量衍生的功能。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["反欺诈", "数据源"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-kyc",
+              "title": "客户身份识别KYC",
+              "description": "在线上审批流程中，加入刷脸等流程识别客户的身份，客户提交刷脸信息后，后台系统通过执行业务策略判别客户是否是本人。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["反欺诈", "KYC"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-strategy",
+              "title": "反欺诈策略管理",
+              "description": "负责执行experian策略，构造输入调用策略，基于输出进行反欺诈决策动作。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["反欺诈", "策略"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-model",
+              "title": "反欺诈模型管理",
+              "description": "调用机器学习模型执行，构造输入，基于模型的输出数据进行反欺诈决策动作。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["反欺诈", "模型"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-transaction",
+              "title": "交易反欺诈",
+              "description": "交易发生前，实时拦截欺诈交易。交易发生后，准实时侦测可以交易。侦测高风险交易，人工排查复核。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["反欺诈", "交易监控"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-card-data",
+      "name": "信用卡数据管理",
+      "icon": "fas fa-database",
+      "submodules": [
+        {
+          "name": "数据分析平台",
+          "functions": [
+            {
+              "id": "func-ccd-analysis-source",
+              "title": "数据源管理接入",
+              "description": "支持多数据源的统一接入与管理，确保业务数据的实时同步与报表数据的集中存储与查询。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["数据", "分析平台"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-analysis-dashboard",
+              "title": "数据看板与邮件报告发送",
+              "description": "提供动态数据看板展示关键指标，并支持定时邮件发送定制化报告，便于业务团队及时监控。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["数据", "看板"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-analysis-metrics",
+              "title": "报告指标管理",
+              "description": "灵活配置产品的指标数据（如逾期率、审批通过率等等），满足不同部门不同场景的分析需求。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["数据", "指标"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-analysis-visualization",
+              "title": "可视化报告分析配置",
+              "description": "通过拖拽式工具快速生成交互式可视化报告，直观呈现业务趋势与绩效数据，包括不限于柱状图、饼状图、图标、文字报表、漏斗图、数据地图、用户行为分析等等。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["数据", "可视化"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-card-docs",
+      "name": "信用卡资料管理",
+      "icon": "fas fa-file-archive",
+      "submodules": [
+      {
+          "name": "资料录入平台",
+          "functions": [
+            {
+              "id": "func-ccd-entry-unstructured",
+              "title": "非结构化信息录入",
+              "description": "支持单录、双录模式让操作任务去录入非结构化文件数据, 保障录入信息的准确性。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["资料录入", "非结构化"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-entry-escalation",
+              "title": "疑难件升级和管理",
+              "description": "针对不清晰的工单进行升级成疑难件, 有更有专业经验的操作人员进行处理。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["资料录入", "疑难件"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-entry-work-order",
+              "title": "录入工单管理",
+              "description": "管理处理中和处理完成的工单, 查看录入的信息以及录入的操作人。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["资料录入", "工单管理"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "电子文书平台",
+          "functions": [
+            {
+              "id": "func-ccd-edoc-template",
+              "title": "模板管理",
+              "description": "管理各类电子印章模板, 查询各类印章模板。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "模板"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-synthesis",
+              "title": "文书合成",
+              "description": "动态模版合成、批量模版合成、PDF模版合成、PDF表单合成（pdfXFA）、标准模版合成-身份证合成、CDN模板、Excel模板、PDF合并模板、Word模板合成。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "合成"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-ops",
+              "title": "运营管理",
+              "description": "签章配置、文书模版配置、文稿配置、文书模版配置/动态模版。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "运营"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-processing",
+              "title": "文书加工",
+              "description": "加水印、解水印、编辑文书（高亮/填充）、文档加密、META数据解析、PDF转图片、PDF压缩、PDF 2 DATA（结合机器学习，智能PDF内容解析）。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "加工", "PDF"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-verification",
+              "title": "防伪查询",
+              "description": "支持ESM签章验证、ESEAL签章验证、ESS签章验证、验签门户、第三方签章验证。",
+              "version": "1.0",
+              "status": "已上线",
+              "tags": ["电子文书", "防伪", "验签"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
