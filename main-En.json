@@ -1,0 +1,47 @@
+{
+  "documentTitle": "Financial Digital Product",
+  "documentSubtitle": "Comprehensive Product Function Framework",
+  "globalOverview": {
+    "title": "WeBank Digital Platform Product Capabilities",
+    "summary": "A modular, highly reusable, and pluggable financial-grade digital solution designed to quickly respond to market changes and empower business innovation and efficiency improvement across the industry through a unified technology platform and standardized business components.",
+    "statsTitle": "Overall Platform Statistics"
+  },
+  "products": [
+    {
+      "id": "retail-deposit",
+      "name": "Retail Deposit",
+      "icon": "fas fa-piggy-bank",
+      "dataFile": "data/retail-deposit-En.json"
+    },
+    {
+      "id": "retail-loan",
+      "name": "Retail Loan",
+      "icon": "fas fa-hand-holding-usd",
+      "dataFile": "data/retail-loan-En.json"
+    },
+    {
+      "id": "credit-card",
+      "name": "Credit Card",
+      "icon": "fas fa-credit-card",
+      "dataFile": "data/credit-card-En.json"
+    },
+    {
+      "id": "corporate-deposit",
+      "name": "Corporate Deposit",
+      "icon": "fas fa-building",
+      "dataFile": "data/corporate-deposit-En.json"
+    },
+    {
+      "id": "corporate-loan",
+      "name": "Corporate Loan",
+      "icon": "fas fa-university",
+      "dataFile": "data/corporate-loan-En.json"
+    },
+    {
+      "id": "middleware",
+      "name": "Middleware",
+      "icon": "fas fa-layer-group",
+      "dataFile": "data/middleware-En.json"
+    }
+  ]
+}
