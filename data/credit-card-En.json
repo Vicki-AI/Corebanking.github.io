@@ -1,0 +1,542 @@
+{
+  "id": "credit-card",
+  "name": "Credit Card",
+  "icon": "fas fa-credit-card",
+  "description": "Provides comprehensive services for credit card application, account management, transactions, and risk control.",
+  "overview": {
+    "summary": "Offers highly configurable core credit card product capabilities covering the entire lifecycle of customer, account, credit limit, transaction, installment, and settlement, and supports rapid integration with major card schemes."
+  },
+  "modules": [
+    {
+      "id": "credit-card-basic",
+      "name": "Credit Card Basic Products",
+      "icon": "fas fa-id-card",
+      "description": "Includes core business functions of credit cards, such as customer management, account/card systems, and card scheme integration.",
+      "submodules": [
+        {
+          "name": "Credit Card Core",
+          "functions": [
+            {
+              "id": "func-cc-core-cust-info",
+              "title": "Customer Information Management",
+              "description": "Provides customer information maintenance functions.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Customer"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-lifecycle",
+              "title": "Account and Card Lifecycle Management",
+              "description": "Provides a multi-dimensional account-card system for different business scenarios.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Account"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-billing",
+              "title": "Interest Calculation and Billing",
+              "description": "Transaction-based interest mechanism; provides bill maintenance and inquiry functions.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Interest", "Billing"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-limit",
+              "title": "Credit Line Services",
+              "description": "Network-based credit limit management system.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Credit Line"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-installment",
+              "title": "Installment Services",
+              "description": "Provides various installment options and full lifecycle installment management.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Installment"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-pricing",
+              "title": "Pricing Services",
+              "description": "Comprehensive pricing mechanism; highly configurable balance object-based pricing.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Pricing"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-accounting",
+              "title": "Accounting Processing",
+              "description": "Provides general ledger and internal account posting and reconciliation functions.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Accounting"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-clearing",
+              "title": "Clearing and Settlement",
+              "description": "Supports batch clearing and error handling.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Settlement"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-params",
+              "title": "Product Parameter Configuration",
+              "description": "Highly configurable product parameters.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Configuration"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-credit-reporting",
+              "title": "Credit Reporting (Optional)",
+              "description": "Reports credit card usage and default information as per regulatory requirements.",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Credit Reporting"], "documentLink": null
+            },
+            {
+              "id": "func-cc-core-bill-mgmt",
+              "title": "Credit Card Bill Management",
+              "description": "Self-Explainatory",
+              "version": "1.O", "status": "Online", "tags": ["Core", "Billing"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Product Center",
+          "functions": [
+            {
+              "id": "func-cc-prod-process",
+              "title": "Product Workflow Management",
+              "description": "Covers processes like account opening, disbursement, repayment, non-financial operations, and operations; supports process orchestration.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Process"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-agreement",
+              "title": "Customer Agreement Center",
+              "description": "Manages agreements like online proactive repayment, batch deductions, incoming payments, internal waivers, enabling precise operations to improve repayment rates.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Agreement"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-pricing",
+              "title": "Pricing Center",
+              "description": "Manages product pricing, supports rule packs and rule tables.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Pricing"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-incoming",
+              "title": "Incoming Payment Center",
+              "description": "Supports incoming payments and repayments; enables full or partial customer-level settlements.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Incoming Payment"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-style",
+              "title": "Style Center",
+              "description": "Displays different front-end styles based on customer groups, tags, or metrics.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Frontend"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-contract",
+              "title": "Product Contract Management",
+              "description": "Manages contracts for different products in different scenarios.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Contract"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-debit",
+              "title": "Deduction Center",
+              "description": "Manages reconciliation files, error files.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Deduction"], "documentLink": null
+            },
+            {
+              "id": "func-cc-prod-reminder",
+              "title": "Repayment Reminders",
+              "description": "Bill date reminders, negative credit reporting reminders, etc.",
+              "version": "1.O", "status": "Online", "tags": ["Product", "Reminder"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Card Association Management",
+          "functions": [
+            {
+              "id": "func-cc-scheme-pre",
+              "title": "Card Scheme Front-End Integration",
+              "description": "Acts as front-end for card network access; maintains long connections, receives online transactions and clearing files; parses ISO 8583, JSON, XML messages; transaction identification; clearing reconciliation file handling.",
+              "version": "1.O", "status": "Online", "tags": ["Card Association", "Front-End", "ISO8583"], "documentLink": null
+            },
+            {
+              "id": "func-cc-scheme-trans",
+              "title": "Card Transaction System",
+              "description": "Supports various card transactions: balance inquiry, purchase, purchase reversal, refund, pre-authorization, pre-authorization cancellation, pre-authorization completion, pre-authorization completion cancellation, pre-authorization notifications, pre-authorization reversals.",
+              "version": "1.O", "status": "Online", "tags": ["Card Association", "Transaction"], "documentLink": null
+            },
+            {
+              "id": "func-cc-scheme-dispute",
+              "title": "Dispute System",
+              "description": "Real-time inquiry for posted transactions; supports dispute creation, initiation, pre-arbitration, arbitration; tracks dispute lifecycle, status, fees, and timelines.",
+              "version": "1.O", "status": "Online", "tags": ["Card Association", "Dispute", "Arbitration"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Physical Card Management",
+          "functions": [
+            {
+              "id": "func-cc-card-media",
+              "title": "Card Medium Information Management",
+              "description": "Supports card lifecycle management: card number generation (special rules, vanity numbers), activation, card checks, PIN changes, loss reporting, unfreezing, cancellations.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Physical Card", "Card Management"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-card-production",
+              "title": "Card Production Management",
+              "description": "Manages card production and card service providers.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Physical Card", "Card Production"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Debit-Credit Center",
+          "functions": [
+            {
+              "id": "func-cc-debit-agreement",
+              "title": "Customer Debit Agreement Management",
+              "description": "Card list inquiry, customer card unbinding, etc.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Batch Deduction", "Agreement"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-debit-batch",
+              "title": "Flexible Batch Deduction Management",
+              "description": "Flexible batch deduction decisions, smart deductions, end-of-day reconciliation, lightweight reconciliation.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Batch Deduction", "Reconciliation"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-debit-online",
+              "title": "Online Transaction Capabilities(Real-time not T+1)",
+              "description": "Provides online posting capabilities; manages ledger accounts.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Batch Deduction", "Online"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Credit Card Finance Operations Platform",
+          "functions": [
+            {
+              "id": "func-cc-ops-balance-calc",
+              "title": "Real-time Balance Allocation Trial Calculation",
+              "description": "Simulates repayment day’s real-time balance and repayment allocation using trial targets (card number or product code) + repayment date.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Trial Calculation"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-payoff-calc",
+              "title": "Full Payoff Calculation",
+              "description": "Calculates the amount required to fully settle the account using card number + payoff date.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Payoff"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-unposted-trans",
+              "title": "Unposted Transaction Processing",
+              "description": "Queries unposted transaction information under the customer’s name using card number.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Unposted"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-manual-entry",
+              "title": "Manual Entry of Repayment/Principal/Fee/Interest",
+              "description": "Manually adjusts cases where the corresponding account (repayment/principal/fee/interest) was over- or under-posted.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Manual Adjustment"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-min-due-adjust",
+              "title": "Manual Adjustment of Minimum Payment",
+              "description": "Refers to manually adjusting the current minimum payment due under the overdue cycle of the account.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Minimum Payment"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-overpayment-transfer",
+              "title": "Excess Deposit Transfer Out",
+              "description": "Queries excess deposit information under the customer’s account using card number or ID type + ID number and allows transfer-out processing.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Overpayment"],
+              "documentLink": null
+            },
+            {
+              "id": "func-cc-ops-exception-mgmt",
+              "title": "Abnormal Transaction Management",
+              "description": "Mainly queries abnormal transaction information caused by unexpected system defects (e.g., network failures).",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Operations", "Abnormal Transaction"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-card-risk",
+      "name": "Credit Card Risk Control",
+      "icon": "fas fa-shield-alt",
+      "submodules": [
+        {
+          "name": "Approval Platform",
+          "functions": [
+            {
+              "id": "func-ccr-approval-datasource",
+              "title": "External Credit Data Integration & Variable Derivation",
+              "description": "Integrates external data sources for risk automation; supports Python snippets for variable derivation.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Risk Control", "Approval", "Data Source"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-strategy",
+              "title": "Automated Approval Strategy Management",
+              "description": "Supports publishing and running Experian strategy packages.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Risk Control", "Approval", "Strategy"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-process",
+              "title": "Approval Workflow Management(Limit management)",
+              "description": "Manages approval flows: blacklist checks, fraud checks, identity verification, credit/price adjustments.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Risk Control", "Approval", "Process"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-scoring",
+              "title": "Scoring Model Management",
+              "description": "Validates and operates machine learning models.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Risk Control", "Approval", "Model"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-manual-review",
+              "title": "Remote Review Platform",
+              "description": "For high-risk or unclear automated approvals, routes to manual review with auto-calling, guided questionnaires, photo/video checks.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Risk Control", "Approval", "Manual Review"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-approval-inloan-decision",
+              "title": "Mid-loan Decision Management",
+              "description": "Post-disbursement risk decisions for repeat borrowers, silent customers, etc.; drives credit and risk adjustments.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Risk Control", "Mid-loan Decision"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Anti Fraud Platform",
+          "functions": [
+            {
+              "id": "func-ccr-antifraud-datasource",
+              "title": "External Credit Data Integration & Variable Derivation",
+              "description": "Integrates external data sources for risk automation; supports Python snippets for variable derivation.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Anti-fraud", "Data Source"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-kyc",
+              "title": "Customer Identity Verification (KYC)",
+              "description": "Adds facial recognition steps to verify customer identity during online approval.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Anti-fraud", "KYC"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-strategy",
+              "title": "Anti-Fraud Strategy Management",
+              "description": "Executes Experian strategies; builds inputs, makes anti-fraud decisions based on outputs.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Anti-fraud", "Strategy"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-model",
+              "title": "Anti-Fraud Model Management",
+              "description": "Runs machine learning models; builds inputs; makes anti-fraud decisions based on model outputs.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Anti-fraud", "Model"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccr-antifraud-transaction",
+              "title": "Transaction Anti-Fraud",
+              "description": "Pre-transaction real-time fraud interception; post-transaction near real-time fraud detection; identifies high-risk transactions for manual review.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Anti-fraud", "Transaction Monitoring"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-card-data",
+      "name": "Credit Card Data Management",
+      "icon": "fas fa-database",
+      "submodules": [
+        {
+          "name": "Data Analysis Platform",
+          "functions": [
+            {
+              "id": "func-ccd-analysis-source",
+              "title": "Data Source Access Management",
+              "description": "Supports unified access and management of multiple data sources, ensuring real-time business data sync and centralized reporting.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Data", "Analysis Platform"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-analysis-dashboard",
+              "title": "Data Dashboard & Email Reporting",
+              "description": "Provides dynamic dashboards; supports scheduled custom report delivery via email.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Data", "Dashboard"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-analysis-metrics",
+              "title": "Report Indicator Management",
+              "description": "Flexibly configures product indicators (e.g., delinquency rate, approval rate) for analysis across departments/scenarios.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Data", "Metrics"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-analysis-visualization",
+              "title": "Visual Report Analysis Configuration",
+              "description": "Uses drag-and-drop tools to generate interactive visual reports: bar charts, pie charts, icons, text, funnels, data maps, behavior analysis, etc.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Data", "Visualization"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-card-docs",
+      "name": "Credit Card Document Management",
+      "icon": "fas fa-file-archive",
+      "submodules": [
+        {
+          "name": "Information Entry Platform",
+          "functions": [
+            {
+              "id": "func-ccd-entry-unstructured",
+              "title": "Unstructured Information Entry",
+              "description": "Supports single/double recording modes for entering unstructured data, ensuring accuracy.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Information Entry", "Unstructured"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-entry-escalation",
+              "title": "Difficult Case Escalation & Management",
+              "description": "Escalates unclear work orders to experienced handlers.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Information Entry", "Difficult Case"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-entry-work-order",
+              "title": "Entry Work Order Management",
+              "description": "Manages ongoing and completed work orders, views entered data, tracks operators.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["Information Entry", "Work Order Management"],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "eDocument Platform",
+          "functions": [
+            {
+              "id": "func-ccd-edoc-template",
+              "title": "Template Management",
+              "description": "Manages various e-seal templates; queries stamp templates.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["eDocument", "Template"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-synthesis",
+              "title": "Document Synthesis",
+              "description": "Dynamic template synthesis, batch template synthesis, PDF template synthesis, PDF form synthesis (pdfXFA), standard template synthesis (ID card), CDN templates, Excel templates, PDF merges, Word synthesis.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["eDocument", "Synthesis"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-ops",
+              "title": "Operations Management",
+              "description": "Manages stamp configs, document templates, scripts, dynamic templates.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["eDocument", "Operations"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-processing",
+              "title": "Document Processing",
+              "description": "Adds/removes watermarks, edits documents (highlight/fill), encrypts documents, parses metadata, converts PDFs to images, compresses PDFs, uses ML to extract data from PDFs.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["eDocument", "Processing", "PDF"],
+              "documentLink": null
+            },
+            {
+              "id": "func-ccd-edoc-verification",
+              "title": "Anti-counterfeit Verification",
+              "description": "Supports ESM/ESEAL/ESS signature verification, verification portals, third-party verifications.",
+              "version": "1.0",
+              "status": "Online",
+              "tags": ["eDocument", "Anti-counterfeit", "Verification"],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

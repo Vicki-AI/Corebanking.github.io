@@ -1,0 +1,431 @@
+{
+  "id": "middleware",
+  "name": "Middleware",
+  "icon": "fas fa-layer-group",
+  "description": "Provides a common technology platform and components to support all business lines.",
+  "overview": {
+    "summary": "Provides a suite of financial-grade, cloud-native foundational middleware tools with a core focus on “lightweight microservices + intelligent governance + elastic infrastructure” to help all business systems achieve efficient development and operations."
+  },
+  "modules": [
+    {
+      "id": "mw-wecube",
+      "name": "Wecube",
+      "icon": "fas fa-cubes",
+      "description": "Enterprise-grade IT operations management suite, providing full-stack capabilities from resource management to process orchestration.",
+      "submodules": [
+        {
+          "name": "Platform",
+          "functions": [
+            {
+              "id": "func-mw-wecube-platform",
+              "title": "No-code Workflow Orchestration Engine",
+              "description": "No-code automation platform for ITOM (IT Operations Management), enabling full lifecycle management of enterprise IT services through a visual orchestration engine.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "workflow orchestration",
+                "no-code"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WeCMDB",
+          "functions": [
+            {
+              "id": "func-mw-wecube-cmdb",
+              "title": "Data Resource Management",
+              "description": "Unified management and configuration data modeling for enterprise IT infrastructure.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "CMDB"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Monitor",
+          "functions": [
+            {
+              "id": "func-mw-wecube-monitor",
+              "title": "Monitoring and Alert Management",
+              "description": "Automates integration with delivery system processes; auto-creates monitoring metrics, alerts, dashboards, enabling instant use.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "monitoring"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Artifacts",
+          "functions": [
+            {
+              "id": "func-mw-wecube-artifacts",
+              "title": "Ops Release Application Management",
+              "description": "Supports automated releases of multiple gray-scale versions and special material packages, simplifying the release process.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "release",
+                "DevOps"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "ITSM",
+          "functions": [
+            {
+              "id": "func-mw-wecube-itsm",
+              "title": "Automated Process Management",
+              "description": "Provides a rich custom form ecosystem, connecting automated workflow orchestration, enabling flexible workflow configuration.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "ITSM"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Terminal",
+          "functions": [
+            {
+              "id": "func-mw-wecube-terminal",
+              "title": "Remote Terminal Management",
+              "description": "Offers comprehensive remote server management solutions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "operations"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "functions": [
+            {
+              "id": "func-mw-wecube-k8s",
+              "title": "Container Cluster Management",
+              "description": "Provides Kubernetes-based cluster management; supports model registration, app deployment, multi-K8S cluster management, event monitoring, etc.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "Kubernetes",
+                "container"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "IT & OM Best Practices",
+          "functions": [
+            {
+              "id": "func-mw-wecube-best-practice",
+              "title": "IT & OM Best Practices",
+              "description": "Offers efficient multi-cloud environments and one-click application migration solutions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "Wecube",
+                "multi-cloud"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-monitoring",
+      "name": "Intelligent Monitoring",
+      "icon": "fas fa-desktop",
+      "description": "An intelligent operations platform based on AIOps concepts, providing comprehensive observability and precise alerting capabilities.",
+      "submodules": [
+        {
+          "name": "AIOps",
+          "functions": [
+            {
+              "id": "func-mw-aiops",
+              "title": "Intelligent Operations Platform (AIOps)",
+              "description": "AIOps platform offering auto-configuration-free collection, computing, and standard monitoring protocol access; provides observability for application performance and business monitoring, visualizes operations with command dashboards, supports correlation analysis across metrics, logs, traces, and integrates stack/SQL viewing to achieve precise alert location; supports combined thresholds, recommended thresholds, AI-based detection, and intelligent alerting.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "AIOps",
+                "monitoring",
+                "observability"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-waas",
+      "name": "WAAS",
+      "icon": "fas fa-cogs",
+      "description": "Enterprise-grade workflow orchestration service, empowering business personnel to build end-to-end workflows independently.",
+      "submodules": [
+        {
+          "name": "WAAS",
+          "functions": [
+            {
+              "id": "func-mw-waas",
+              "title": "WAAS (Workflow as a Service)",
+              "description": "Decouples complex business into reusable atomic components; enables business teams to build end-to-end workflows via drag-and-drop engines, rule panels, preset industry template libraries, reducing new business launch cycles from weeks to hours.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "WAAS",
+                "workflow",
+                "low-code"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-masa",
+      "name": "MASA",
+      "icon": "fas fa-project-diagram",
+      "description": "Financial-grade cloud-native microservices platform, providing intelligent governance and elastic infrastructure.",
+      "submodules": [
+        {
+          "name": "WEAPM",
+          "functions": [
+            {
+              "id": "func-mw-masa-weapm",
+              "title": "General Observability Platform",
+              "description": "Tracing/logging query and analysis.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "observability"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WEMQ",
+          "functions": [
+            {
+              "id": "func-mw-masa-wemq",
+              "title": "Distributed Message Queue",
+              "description": "Message storage and forwarding.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "message queue"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WEREDIS",
+          "functions": [
+            {
+              "id": "func-mw-masa-weredis",
+              "title": "General High-speed Caching Service",
+              "description": "WeRedis is a distributed caching platform developed on open-source Redis; supports subsystem-level resource control and access authentication; proactively blocks high-risk operations and dangerous accesses; built on multi-cluster, cross-IDC deployment for online scaling, achieving higher scalability at the small cluster level; provides intelligent analysis reports and warnings for fine-grained operations.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "caching",
+                "Redis"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WESGS",
+          "functions": [
+            {
+              "id": "func-mw-masa-wesgs",
+              "title": "Service Governance",
+              "description": "Manages service IDs, deployment regions, request/response flows.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "service governance"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "RMB",
+          "functions": [
+            {
+              "id": "func-mw-masa-rmb",
+              "title": "Reliable Message Bus",
+              "description": "Supports synchronous and asynchronous call integration.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "message bus"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "MASA",
+          "functions": [
+            {
+              "id": "func-mw-masa-platform",
+              "title": "MASA (Modern Application and Service Architecture)",
+              "description": "A financial-grade, cloud-native middleware toolkit built on the “lightweight microservices + intelligent governance + elastic infrastructure” triad; provides service mesh, event mesh, unified observability components, helping business systems achieve efficient development and operations; supports active-active deployments across cities or regions, intelligent traffic scheduling, guarantees 99.999% service SLA; compatible with mainstream microservice frameworks and ESB (Enterprise Service Bus), enabling smooth migration from centralized to distributed systems; supports seamless cross-cloud migration, improving resource utilization and operational automation, with full-stack independent control.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "microservices",
+                "cloud native"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "GNS",
+          "functions": [
+            {
+              "id": "func-mw-masa-gns",
+              "title": "Global Service Location System",
+              "description": "Provides DCN (Data Center Network) location services for application systems.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "service discovery"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "WELB",
+          "functions": [
+            {
+              "id": "func-mw-masa-welb",
+              "title": "General Load Balancing Management System",
+              "description": "Load balancing plugin adaptation.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "MASA",
+                "load balancing"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-tech-platform",
+      "name": "Technical Platform",
+      "icon": "fas fa-server",
+      "description": "Provides basic common capabilities to serve various business systems.",
+      "submodules": [
+        {
+          "name": "FPS",
+          "functions": [
+            {
+              "id": "func-mw-fps",
+              "title": "File Processing",
+              "description": "FPS file processing system, serving as a foundational public capability, mainly provides file storage services for various business systems.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "file services"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-customer-account",
+      "name": "Customer & Account System",
+      "icon": "fas fa-users-cog",
+      "description": "Provides a centralized, unified, shared single customer view.",
+      "submodules": [
+        {
+          "name": "ECIF",
+          "functions": [
+            {
+              "id": "func-mw-ecif",
+              "title": "Customer Information System (ECIF)",
+              "description": "ECIF integrates customer information across internal banking products, including customer basics, accounts, and product relationships, to provide a centralized, unified, authoritative single customer view, building a “customer-centric” operational and development system that supports existing business systems and enhances customer experience and market competitiveness.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "ECIF",
+                "customer information"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mw-security-tools",
+      "name": "Security Tools",
+      "icon": "fas fa-user-lock",
+      "description": "Provides unified user identity authentication and permission management capabilities.",
+      "submodules": [
+        {
+          "name": "User Management System (UM)",
+          "functions": [
+            {
+              "id": "func-mw-um",
+              "title": "Unified User Login and Permission Management Platform",
+              "description": "Unified identity authentication supporting multiple login protocols; users can log into multiple systems with one account; unified permission management and reporting to ensure consistent policies, e.g., unified access requests, automatic removal of departing users’ permissions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "security",
+                "permission management",
+                "IAM"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

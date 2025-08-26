@@ -1,0 +1,1242 @@
+{
+  "id": "retail-deposit",
+  "name": "Retail Deposit",
+  "icon": "fas fa-piggy-bank",
+  "description": "Provides comprehensive deposit services for individual customers, including various product types such as demand deposits, time deposits, and savings deposits.",
+  "overview": {
+    "summary": "Retail deposit products offer end-to-end personal deposit service solutions, covering full lifecycle functions including account management, product configuration, payment settlement, risk control, and data analysis.",
+    "stats": [],
+    "coreFeatures": []
+  },
+  "modules": [
+    {
+      "id": "retail-deposit-core",
+      "name": "Retail Deposit Core",
+      "icon": "fas fa-database",
+      "description": "Provides core functions for deposit business, including core capabilities such as account management, product management, interest rate management, and transaction processing.",
+      "submodules": [
+        {
+          "name": "Account Management",
+          "functions": [
+            {
+              "id": "func-rdc-account-lifecycle",
+              "title": "Account Full Lifecycle Management",
+              "description": "Manages the full lifecycle of bank customer accounts, including core functions like account structure management, opening, closing, info maintenance, status control, permission setup, and relationship handling.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account",
+                "core"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rdc-account-open",
+              "title": "Customer Account Opening",
+              "description": "Supports individual customer account opening, including identity verification and information entry.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account",
+                "account opening"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rdc-account-maintain",
+              "title": "Customer Information Maintenance",
+              "description": "Supports functions like modifying basic customer information and updating contact details.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account",
+                "information maintenance"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rdc-account-status",
+              "title": "Account Status Management",
+              "description": "Supports status change operations like account freezing, unfreezing, and closure.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account",
+                "status management"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Product Management",
+          "functions": [
+            {
+              "id": "func-rdc-product-lifecycle",
+              "title": "Product Full Lifecycle Management",
+              "description": "Responsible for the full lifecycle management of deposit products, achieving standardized management, supporting demand and term products, including product design, parameter setup, and activation/deactivation control.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "product",
+                "core"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rdc-product-config",
+              "title": "Product Configuration",
+              "description": "Supports parameterized configuration of deposit products, including interest rates, terms, and minimum deposit amounts.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "product",
+                "configuration"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Interest Rate Management",
+          "functions": [
+            {
+              "id": "func-rdc-interest-model",
+              "title": "Interest Rate Model Management",
+              "description": "Supports differentiated customer interest rate models, including board rates, product rates, customer group rates, and individual customer rates.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "interest rate",
+                "pricing"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rdc-interest-set",
+              "title": "Interest Rate Setup",
+              "description": "Supports differentiated customer interest rate models, including board rates, product rates, customer group rates, and individual customer rates.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "interest rate",
+                "setup"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rdc-interest-adjust",
+              "title": "Interest Rate Adjustment",
+              "description": "Supports dynamic interest rate adjustments and historical record inquiries.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "interest rate",
+                "adjustment"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Tax Management",
+          "functions": [
+            {
+              "id": "func-rdc-tax-rules",
+              "title": "Tax Rule Management",
+              "description": "Flexibly supports tax rule configuration, including tax and tax exemption rules, with automated tax processing.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "tax",
+                "automation"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Fee Management",
+          "functions": [
+            {
+              "id": "func-rdc-fee-rules",
+              "title": "Fee Rule Management",
+              "description": "Manages the configuration of account service fees, transaction fees, automated fee collection, and error handling processes.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "fee",
+                "automation"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Transaction Restrictions",
+          "functions": [
+            {
+              "id": "func-rdc-transaction-limits",
+              "title": "Multi-Level Transaction Control",
+              "description": "Supports multi-level account control and transaction restrictions by customer, account, and card; allows account freezing; supports multi-dimensional transaction restrictions based on channel, product, and scenario.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "risk control",
+                "transaction control"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Transaction Processing",
+          "functions": [
+            {
+              "id": "func-rdc-transaction-processing",
+              "title": "Core Transaction Processing",
+              "description": "Completes core deposit transactions including deposits, withdrawals, transfers, and reversals, ensuring real-time and accurate accounting.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "transaction",
+                "core"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Inquiry",
+          "functions": [
+            {
+              "id": "func-rdc-query-service",
+              "title": "Multi-Dimensional Inquiry Service",
+              "description": "Provides multi-dimensional query services for account balances, transaction history, and product details; supports real-time and historical data retrieval.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "inquiry"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Internal Account Management",
+          "functions": [
+            {
+              "id": "func-rdc-internal-accounts",
+              "title": "Internal Account System Management",
+              "description": "Sets up an internal account system within the deposit system to facilitate settlement or clearing for external systems.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "accounting",
+                "clearing"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Accounting",
+          "functions": [
+            {
+              "id": "func-rdc-accounting",
+              "title": "Full Business Scenario Accounting",
+              "description": "Executes accounting for all business scenarios, subject balance checks, end-of-day batch processing, and automated generation of regulatory reports.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "finance",
+                "accounting"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Batch Processing",
+          "functions": [
+            {
+              "id": "func-rdc-batch-processing",
+              "title": "Batch File Processing",
+              "description": "Provides the capability for batch handling of deposit core online reconciliation files and batch deduction files.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "batch",
+                "file processing"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retail-deposit-product",
+      "name": "Retail Deposit Products",
+      "icon": "fas fa-cubes",
+      "description": "Provides functions for the design, configuration, and management of deposit products, supporting a flexible product factory model.",
+      "submodules": [
+        {
+          "name": "Retail Deposit Product Factory",
+          "functions": [
+            {
+              "title": "Product Template Management",
+              "description": "Maintains a standardized deposit product template library; supports parameterized configurations like rate structure, term rules, and interest calculation methods; enables rapid combination and release of new products.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "product factory"
+              ]
+            },
+            {
+              "title": "Product Management",
+              "description": "Creates, maintains, and releases deposit products, including account structures, deposit agreements, and opening/closing rules.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "product management"
+              ]
+            },
+            {
+              "title": "Parameter Management",
+              "description": "Supports adding, modifying, deleting, and exporting public and product parameters, including but not limited to currency, opening institution, opening channel, and deposit rates.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "parameter management"
+              ]
+            },
+            {
+              "title": "Agreement Management",
+              "description": "Queries, maintains, and releases deposit agreements, which include interest, fee, and tax rules.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "agreement management"
+              ]
+            },
+            {
+              "title": "Extended Functions",
+              "description": "Supports adding, deleting, and querying custom fields across modules like customer, account, sub-account, product, and agreement.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "extended functions"
+              ]
+            },
+            {
+              "title": "Simulator",
+              "description": "Built-in product yield calculator and sandbox testing environment; supports interest sensitivity analysis, cash flow simulation, and pre-generation of regulatory report data.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "simulator",
+                "testing"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Retail Deposit Product (Middle Layer) Portal",
+          "functions": [
+            {
+              "title": "Business Process Template",
+              "description": "Provides templates for processes like account opening, closing, transfer, and account status inquiries.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "business process"
+              ]
+            },
+            {
+              "title": "Work Order Management",
+              "description": "Manages full-process work orders (account opening, changes, transfers, etc.) for deposit business.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "work order"
+              ]
+            },
+            {
+              "title": "Business Security",
+              "description": "Provides general components such as transaction deduplication and business frequency management.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "security"
+              ]
+            },
+            {
+              "title": "Customer Agreement Management",
+              "description": "Configures, queries, and modifies customer agreements.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "customer agreement"
+              ]
+            },
+            {
+              "title": "Deposit Certificate",
+              "description": "Generates standardized electronic deposit certificates, integrates with local e-signature, supports instant online download.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "deposit certificate"
+              ]
+            },
+            {
+              "title": "Notification",
+              "description": "Triggers multi-channel notifications based on event-driven architecture, configurable message templates, and sending rules.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "notifications"
+              ]
+            },
+            {
+              "title": "Product Shelf",
+              "description": "Maintains multi-dimensional labeling system for deposit products, enabling smart recommendations, channel-specific pricing, and flexible regional sales strategies.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "product shelf"
+              ]
+            },
+            {
+              "title": "Custom Forms",
+              "description": "Low-code component for configurable custom forms; supports CRUD services; enables rapid iteration during process changes without code modifications.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "custom forms"
+              ]
+            },
+            {
+              "title": "Grayscale Management",
+              "description": "Component for traffic-tiered strategy in business feature releases; supports A/B testing, exception fallback, and fast version rollback, ensuring smooth business iteration.",
+              "status": "online",
+              "tags": [
+                "retail deposit",
+                "grayscale management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "payment",
+      "name": "Payment",
+      "icon": "fas fa-money-check-alt",
+      "description": "Provides comprehensive payment solutions, including unified payment and SWIFT international payment services.",
+      "submodules": [
+        {
+          "name": "Unified Payment",
+          "functions": [
+            {
+              "id": "func-payment-channel-config",
+              "title": "Channel Configuration",
+              "description": "Manages access parameters, protocol conversions, and health maintenance for payment channels; supports dynamic expansion and failover across bank/third-party payment channels.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment",
+                "channel"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-payment-product-config",
+              "title": "Product Configuration",
+              "description": "Defines basic attributes (fees/limits/applicable scenarios) of payment products, enabling quick integration.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment",
+                "product"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-payment-strategy-config",
+              "title": "Strategy Configuration",
+              "description": "Sets intelligent routing strategies (cost/success priority), risk control rules, and fund pooling strategies to dynamically optimize payment flow selection.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment",
+                "strategy"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-payment-transaction-engine",
+              "title": "Transaction Engine",
+              "description": "Executes protocol parsing, routing distribution, transaction state machine control, and exception handling for payment requests, ensuring atomic operations under high concurrency.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment",
+                "engine"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-payment-monitoring",
+              "title": "Monitoring",
+              "description": "Tracks key metrics like transaction success rate, response time, and channel load in real time; configures threshold alarms and fallback mechanisms.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment",
+                "monitoring"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-payment-reconciliation",
+              "title": "Reconciliation",
+              "description": "Automatically performs reconciliation with channels, merchant settlements, and error handling.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment",
+                "reconciliation"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "SWIFT",
+          "functions": [
+            {
+              "id": "func-swift-position-management",
+              "title": "Position Management",
+              "description": "Manages user-held clearing balances; provides position reporting, occupation, usage inquiry, monitoring, and allocation functions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "SWIFT",
+                "position"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-swift-transaction-management",
+              "title": "Transaction Management",
+              "description": "Handles business activities related to payment transactions or SWIFT message queries, modifications, cancellations, or confirmations between the bank's internal system and counterpart financial institutions, mainly through SWIFT MT and camt messages.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "SWIFT",
+                "transaction"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-swift-message-management",
+              "title": "Message Management",
+              "description": "Includes functions like message parsing, assembly, creation, sending, receiving, routing, querying, printing, and statistics.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "SWIFT",
+                "message"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-swift-integration-management",
+              "title": "Integration Management",
+              "description": "Provides business integration with related systems, handling outgoing messages initiated by internal systems and incoming messages from the external message platform.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "SWIFT",
+                "integration"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-swift-reconciliation-processing",
+              "title": "Reconciliation Processing",
+              "description": "Provides management of account bank statements, reconciliation between account bank statements and clearing transactions, inquiry of reconciliation results, and reconciliation between clearing transactions and the core system ledger.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "SWIFT",
+                "reconciliation"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "operation-management",
+      "name": "Ops Management",
+      "icon": "fas fa-tasks",
+      "description": "Responsible for the daily operations and process management of deposit business, ensuring efficient and stable business operations.",
+      "submodules": [
+          {
+            "name": "Deposit Core Counter",
+            "functions": [
+              {
+                "id": "func-om-core-acct-trans",
+                "title": "Ledger Transaction",
+                "description": "Handles atomic operations for deposit account fund payments, supports core transaction types like transfers and reversals.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "ledger"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-acct-mgmt",
+                "title": "Account Management",
+                "description": "Manages the full lifecycle of deposit accounts (opening, closing, changes).",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "account"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-query",
+                "title": "Inquiry",
+                "description": "Provides real-time inquiries for account balances, transaction history, detailed historical records; supports multi-condition search and report export.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "inquiry"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-trans-control",
+                "title": "Transaction Control",
+                "description": "Maintains control code management, account freezing, unfreezing, and freeze extensions.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "risk control"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-limit-mgmt",
+                "title": "Limit Management",
+                "description": "Configures daily and per-transaction limits at account/customer levels; supports differentiated limit strategies by channel and dynamic limit adjustments.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "limit"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-interest-mgmt",
+                "title": "Interest Management",
+                "description": "Handles interest rate changes and inquiries.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "interest rate"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-internal-acct",
+                "title": "Internal Account Management",
+                "description": "Supports internal account opening, closing, and inquiries.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "internal account"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-fee-mgmt",
+                "title": "Fee Management",
+                "description": "Defines rules for account management fees and transaction fees; supports differentiated rate configurations and periodic automatic deductions.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "fee"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-param-mgmt",
+                "title": "Parameter Management",
+                "description": "Maintains parameters such as holiday calendars.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "parameter"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-core-teller-mgmt",
+                "title": "Teller Management",
+                "description": "Controls teller operation permissions (roles, institutions, business scope), password strategies, and operation log audits, building a secure permission matrix.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "counter",
+                  "permission"
+                ],
+                "documentLink": null
+              }
+            ]
+          },
+          {
+            "name": "Payment Counter",
+            "functions": [
+              {
+                "id": "func-om-payment-remit",
+                "title": "Outbound Business",
+                "description": "Enables tellers to input and submit outbound remittance information and query related details.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "remittance"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-param",
+                "title": "Parameter Management",
+                "description": "Maintains SWIFT BIC codes, RMA codes, account bank parameters, GPI status codes, etc.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "parameter"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-transaction",
+                "title": "Transaction Management",
+                "description": "Manages transaction-type messages related to outbound remittance, including queries, initiation, and handling, covering MT199, MT195, MT196, etc.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "SWIFT"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-message",
+                "title": "Message Management",
+                "description": "Provides queries for the original content of messages.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "message"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-queue",
+                "title": "Clearing Queue",
+                "description": "Allows viewing and reprocessing of queued outbound messages when conditions are met.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "clearing"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-exception",
+                "title": "Exception Management",
+                "description": "Provides details on exception transaction flows.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "exception handling"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-gpi",
+                "title": "GPI Management",
+                "description": "Provides details on GPI remittance messages requiring manual feedback.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "GPI"
+                ],
+                "documentLink": null
+              },
+              {
+                "id": "func-om-payment-reconciliation",
+                "title": "Reconciliation Management",
+                "description": "Manages reconciliation queries and processing, including statement list queries, incoming message list, date switch list, detailed statement transactions, balance checks, reconciliation steps, miscellaneous queries, error lists, and non-final order lists.",
+                "version": "1.0",
+                "status": "online",
+                "tags": [
+                  "payment counter",
+                  "reconciliation"
+                ],
+                "documentLink": null
+              }
+            ]
+          }
+      ]
+    },
+
+    {
+      "id": "risk-management",
+      "name": "Risk Management",
+      "icon": "fas fa-shield-alt",
+      "description": "Provides risk identification, assessment, monitoring, and control functions related to deposit business, ensuring fund security.",
+      "submodules": [
+        {
+          "name": "Anti-Fraud",
+          "functions": [
+            {
+              "id": "func-rm-antifraud-strategy",
+              "title": "Anti-Fraud Strategy Management",
+              "description": "Maintains anti-fraud strategy information, bypass strategies, and strategy change records.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "anti-fraud",
+                "strategy"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rm-antifraud-detection",
+              "title": "Real-Time Fraud Detection and Identification",
+              "description": "Manages anti-fraud services, provides anti-fraud decision-making services, and intercepts high-risk fraudulent activities.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "anti-fraud",
+                "real-time monitoring"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rm-antifraud-validation",
+              "title": "Fraud Strategy Change Verification Management",
+              "description": "Manages strategy bypass verification and A/B testing.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "anti-fraud",
+                "A/B testing"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rm-antifraud-metrics",
+              "title": "Metric Calculation",
+              "description": "Provides general near real-time and T+1 metric calculation capabilities.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "anti-fraud",
+                "metrics"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Blacklist",
+          "functions": [
+            {
+              "id": "func-rm-blacklist-management",
+              "title": "List Management",
+              "description": "Manages lists from various sources (e.g., external and internal lists), supporting operations like adding and deleting.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "blacklist",
+                "management"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rm-blacklist-rules",
+              "title": "Detection Rule Management",
+              "description": "Configures hit rules for different list groups (e.g., sanctions, terrorist lists, red notices) such as name and address match thresholds and conditions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "blacklist",
+                "rules"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-rm-blacklist-search",
+              "title": "List Search",
+              "description": "Provides list searches across dimensions such as name, address, country, account, ID information, notes, and remarks.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "blacklist",
+                "search"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "foreign-exchange",
+      "name": "Foreign Exchange",
+      "icon": "fas fa-globe",
+      "description": "Supports functions related to multi-currency deposits, currency exchange, and foreign exchange transactions.",
+      "submodules": [
+        {
+          "name": "Pricing Engine",
+          "functions": [
+            {
+              "id": "func-fx-quote-sourcing",
+              "title": "Channel, Data & Price Source Access",
+              "description": "Manages access to external market data and price sources.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "forex",
+                "pricing"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fx-quote-management",
+              "title": "Market & Price Management",
+              "description": "Cleans and aggregates external market data, maintains price data, and distributes it across multiple channels to support trading.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "forex",
+                "market data"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fx-quote-spread",
+              "title": "Spread Management",
+              "description": "Supports multi-dimensional spread management according to pricing strategies, flexible multi-panel configurations, and enable/disable functions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "forex",
+                "spread"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Forex Transaction",
+          "functions": [
+            {
+              "id": "func-fx-trade-management",
+              "title": "Trade Management",
+              "description": "Includes customer trades, internal trades, and interbank trade recording and tracking.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "forex",
+                "transaction"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fx-trade-accounting",
+              "title": "Accounting Management",
+              "description": "Handles accounting related to foreign exchange transactions and supports reconciliation between channels and core systems.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "forex",
+                "accounting"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fx-trade-reporting",
+              "title": "Report Management",
+              "description": "Computes, displays, and tracks exposures, P&L, and other metrics from FX trading.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "forex",
+                "report"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "finance",
+      "name": "Finance",
+      "icon": "fas fa-calculator",
+      "description": "Responsible for core financial functions including general ledger management, accounting operations, and liquidity risk management.",
+      "submodules": [
+        {
+          "name": "General Ledger",
+          "functions": [
+            {
+              "id": "func-fin-gl-org",
+              "title": "Organization Management",
+              "description": "Maintains organizational information, standardizing and regulating management across legal entities.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "organization"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-ledger",
+              "title": "Account Set Management",
+              "description": "Maintains account set information, allowing each to independently record accounting vouchers under different accounting systems and requirements.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "account set"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-valueset",
+              "title": "Value Set Management",
+              "description": "Maintains value set field information related to business, including definitions and items.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "value set"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-multidim",
+              "title": "Multi-Dimensional Management",
+              "description": "Manages multi-dimensional segments of the general ledger account set, enabling multi-dimensional queries and meeting downstream statistical analysis needs.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "multi-dimensional"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-period",
+              "title": "Period Management",
+              "description": "Maintains general ledger accounting period settings, ensuring periodic and timely financial reporting.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "period"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-currency",
+              "title": "Foreign Currency Management",
+              "description": "Maintains original currency settings in the general ledger, supports querying, adding, and modifying.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "foreign currency"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-journal-entry",
+              "title": "Journal Entry Input",
+              "description": "Allows manual entry, query, viewing, addition, modification, reversal, copying, deletion, import, and export of general ledger journal entries.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "journal entry"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-journal-query",
+              "title": "Journal Entry Query",
+              "description": "Enables journal entry queries, Excel export, PDF export, and email delivery.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "query"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-gl-report-query",
+              "title": "Report Query",
+              "description": "Provides queries and exports for basic reports such as status reports, balance sheets, and income statements.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "general ledger",
+                "report"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Liquidity Risk Management",
+          "functions": [
+            {
+              "id": "func-fin-pos-forecast",
+              "title": "Liquidity Forecasting",
+              "description": "Uses historical data and business scenario modeling to predict future cash inflow/outflow gaps.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "liquidity",
+                "forecasting"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-pos-monitor",
+              "title": "Real-Time Monitoring",
+              "description": "Tracks key indicators, large transaction dynamics, and market liquidity changes via dashboard for risk visualization.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "liquidity",
+                "monitoring"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-pos-alert",
+              "title": "Position Alerting",
+              "description": "Sets multi-level threshold triggers to intelligently alert and push notifications for risk events like abnormal account balances or excessive term mismatches.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "liquidity",
+                "alerting"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-fin-pos-control",
+              "title": "Transaction Control Management",
+              "description": "Implements channel transaction limit management, large transaction approval flow control, and liquidity protection mechanisms during special periods; dynamically adjusts fund flow scales.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "liquidity",
+                "risk control"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "data-management",
+      "name": "Data Management",
+      "icon": "fas fa-database",
+      "description": "Provides unified capabilities for data distribution, data warehouse modeling, and metric management.",
+      "submodules": [
+        {
+          "name": "Data Transfer (Middle Layer) Portal",
+          "functions": [
+            {
+              "title": "Data Transfer Management",
+              "description": "Supports data pushing across databases (e.g., TDSL to Hive or TiDB); provides counter-side configurable access; ensures general data validation and table splitting.",
+              "status": "online",
+              "tags": [
+                "data transfer",
+                "management"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Deposit Data Warehouse",
+          "functions": [
+            {
+              "title": "Standard Model",
+              "description": "Builds unified data standards; uses layered modeling (ODS/DWD/DWS/ADS) to standardize subject domain data, ensuring consistency, reusability, and scalability.",
+              "status": "online",
+              "tags": [
+                "data warehouse",
+                "standard model"
+              ]
+            },
+            {
+              "title": "Data Splitting",
+              "description": "Supports data splitting across different dimensions (product, channel) and data permission management.",
+              "status": "online",
+              "tags": [
+                "data warehouse",
+                "data splitting"
+              ]
+            },
+            {
+              "title": "Metric Management",
+              "description": "Defines calculation logic for atomic and derived indicators, supporting KPI statistics and analysis for deposit business.",
+              "status": "online",
+              "tags": [
+                "data warehouse",
+                "metrics"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

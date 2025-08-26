@@ -1,0 +1,311 @@
+{
+  "id": "corporate-loan",
+  "name": "Corporate Loan",
+  "icon": "fas fa-university",
+  "description": "Provides services such as loans, risk management, and asset disposal for corporate customers.",
+  "overview": {
+    "summary": "Provides a full-process corporate credit solution covering customer management, credit approval, contracts, disbursement, repayment, post-loan, and asset disposal, and strengthens enterprise risk control through a unified credit limit and namelist system."
+  },
+  "modules": [
+    {
+      "id": "corporate-loan-main",
+      "name": "Corporate Loan",
+      "icon": "fas fa-file-invoice-dollar",
+      "description": "Responsible for core process management of corporate loan business, supporting the entire process from customer access to post-loan management.",
+      "submodules": [
+        {
+          "name": "Corp/SME Loan Core（Offline）",
+          "functions": [
+            {
+              "id": "func-cl-cust-mgmt",
+              "title": "Customer Management",
+              "description": "Entry and maintenance of customer information.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-credit-apply",
+              "title": "Credit Application and Approval",
+              "description": "Management of corporate loan credit applications and approvals.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "credit",
+                "approval"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-contract-mgmt",
+              "title": "Contract Management",
+              "description": "Contract management within corporate loan business processes.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "contract"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-drawdown-apply",
+              "title": "Drawdown Application and Approval",
+              "description": "Management of corporate loan disbursement applications and approvals.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "disbursement",
+                "approval"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-product-mgmt",
+              "title": "Product Management",
+              "description": "Logic handling related to corporate loan core system product management.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "product management"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-iou-mgmt",
+              "title": "Loan Note Management",
+              "description": "Handling logic for corporate loan note management.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "loan note"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-accounting-mgmt",
+              "title": "Accounting Management",
+              "description": "Responsible for accounting at the loan note level, generating detailed accounts, subsidiary ledgers, and general ledger information for each note.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "accounting",
+                "accounts"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-repayment-mgmt",
+              "title": "Repayment Management",
+              "description": "Management of repayment functions for corporate loan notes.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "repayment"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-postloan-mgmt",
+              "title": "Post-loan Management",
+              "description": "Post-loan management of corporate loan notes, including interest adjustment, write-off management, etc.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "post-loan"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-ops-mgmt",
+              "title": "Operations Management",
+              "description": "Responsible for version releases, daily operations issue troubleshooting, and follow-up actions in corporate loan business.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "operations"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cl-config-mgmt",
+              "title": "Configuration Management",
+              "description": "Managing and configuring system basic settings, including title maintenance, logo configuration, etc.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "configuration"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enterprise-risk",
+      "name": "Enterprise Risk",
+      "icon": "fas fa-exclamation-triangle",
+      "description": "Provides unified credit limit management and risk namelist monitoring for corporate customers.",
+      "submodules": [
+        {
+          "name": "Unified Credit Limit Management",
+          "functions": [
+            {
+              "id": "func-er-limit-control",
+              "title": "Credit Limit Management and Control",
+              "description": "Issuance, occupation, release, and write-off of customer credit limits.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "credit limit",
+                "risk control"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-er-limit-info",
+              "title": "Credit Information Management",
+              "description": "Used to query credit information, view customer credit limits, usage, balance, etc.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "credit limit",
+                "query"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-er-limit-status",
+              "title": "Credit Status Management",
+              "description": "Queries credit information; enables freezing, unfreezing, and termination of credit, and handles approval and review of these actions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "credit limit",
+                "status management"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-er-limit-config",
+              "title": "Configuration Management",
+              "description": "Management of credit products and batch configurations.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "credit limit",
+                "configuration"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Risk Namelist Management",
+          "functions": [
+            {
+              "id": "func-er-list-mgmt",
+              "title": "Corporate Risk List Management",
+              "description": "Functions for querying, importing, editing, and deleting corporate client blacklists.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "namelist",
+                "blacklist"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-er-list-query",
+              "title": "Blacklist Query",
+              "description": "Querying corporate blacklist information.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "namelist",
+                "query"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asset-disposal",
+      "name": "Asset Disposal",
+      "icon": "fas fa-gavel",
+      "description": "Provides collection operations and system management functions for overdue assets.",
+      "submodules": [
+        {
+          "name": "Collections",
+          "functions": [
+            {
+              "id": "func-ad-collection-mgmt",
+              "title": "Collection Management",
+              "description": "Allows collection agents to view assigned case details, update case status, add notes, ensuring transparency and traceability in the collection process.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "collection",
+                "case management"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-ad-permission-mgmt",
+              "title": "Permission Management",
+              "description": "Controls user access and operation permissions (view, edit, delete, etc.) to ensure data security and integrity; also manages access permissions to system interfaces.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "collection",
+                "permission"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-ad-data-processing",
+              "title": "Data Processing",
+              "description": "Acquires raw data from multiple sources and performs data cleaning, transformation, and aggregation to ensure data accuracy and consistency.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "collection",
+                "data processing"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-ad-reporting",
+              "title": "Reporting and Analysis",
+              "description": "Generates various reports but does not provide advanced data analysis or visualization tools; users can export reports to Excel or other analysis tools for further processing.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "collection",
+                "report"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-ad-system-mgmt",
+              "title": "System Management",
+              "description": "Manages institutions, case assignment groups, users, etc.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "collection",
+                "system management"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

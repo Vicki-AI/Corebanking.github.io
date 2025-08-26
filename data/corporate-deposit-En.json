@@ -1,0 +1,431 @@
+{
+  "id": "corporate-deposit",
+  "name": "Corporate Deposit",
+  "icon": "fas fa-building",
+  "description": "Provides account, settlement, and cash management deposit services for corporate customers.",
+  "overview": {
+    "summary": "Offers one-stop, full lifecycle management for corporate accounts, diverse payment and settlement services, and a rich matrix of deposit products to help companies efficiently manage cash and increase funds."
+  },
+  "modules": [
+    {
+      "id": "corp-account-cash",
+      "name": "Account, Settlement, and Cash Management",
+      "icon": "fas fa-money-bill-wave",
+      "description": "Provides core functions for corporate account management, payment settlement, and various corporate deposit products.",
+      "submodules": [
+        {
+          "name": "Corp/SME Account Management",
+          "functions": [
+            {
+              "id": "func-cd-acct-open",
+              "title": "Account Opening",
+              "description": "Provides functions to open corporate general settlement accounts or sub-accounts.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "account opening"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-offline-verify",
+              "title": "Offline Verification",
+              "description": "Bank performs offline review of company-submitted account opening materials to confirm customer identity authenticity and legitimacy.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "review"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-record",
+              "title": "Account Filing",
+              "description": "Submits relevant materials to financial regulatory agencies to complete filing procedures.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "filing",
+                "regulation"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-query",
+              "title": "Account Inquiry",
+              "description": "Provides queries for account balances, transaction details, receipts, and statements.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "inquiry"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-change",
+              "title": "Account Change",
+              "description": "Provides functions to modify corporate account information.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "change"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-close",
+              "title": "Account Closure",
+              "description": "Provides functions to close corporate accounts.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "cancellation"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-annual-check",
+              "title": "Annual Account Review",
+              "description": "Annually reviews compliance, legality, account info, and document authenticity for opened RMB corporate settlement accounts, compares with system records, and marks annual review status.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "annual review"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-dormant-check",
+              "title": "Dormant Account Check",
+              "description": "Checks corporate settlement accounts to identify accounts with no transactions for over a year and flags them.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "dormant account"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-abnormal-check",
+              "title": "Monthly Business Abnormality Check",
+              "description": "Conducts monthly reviews of company operational irregularities, e.g., late annual reports, unreachable registered address, unfulfilled administrative licenses, tax violations — directly impacting company credit, operations, and financing.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "business abnormality"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-acct-reconciliation",
+              "title": "Bank-Enterprise Reconciliation",
+              "description": "Bank-initiated; based on point-in-time balances, adjusts unreconciled items to confirm if current-period transactions match between bank and enterprise.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "account management",
+                "reconciliation"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Payment Settlement Platform",
+          "functions": [
+            {
+              "id": "func-cd-payment-single",
+              "title": "Single Transfer",
+              "description": "Transfers funds from the bank’s general settlement account to another recipient account.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment settlement",
+                "transfer"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-batch",
+              "title": "Batch Transfer",
+              "description": "Transfers funds from the bank’s general settlement account to multiple recipient accounts in one batch.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment settlement",
+                "batch"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-scheduled",
+              "title": "Scheduled Transfer",
+              "description": "Pre-schedules transfers from the bank’s general settlement account to other recipient accounts at set times.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment settlement",
+                "scheduled"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-payroll",
+              "title": "Corporate Payroll",
+              "description": "Provides salary, allowance, and bonus payment functions.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment settlement",
+                "payroll"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-reimbursement",
+              "title": "Corporate Payout",
+              "description": "Provides other corporate mass payment functions, e.g., expense reimbursements (non-salary corporate-to-personal transfers).",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment settlement",
+                "payout"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-payment-collection",
+              "title": "Corporate Collection",
+              "description": "Provides corporate-to-corporate and corporate-to-personal collection capabilities.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "payment settlement",
+                "collection"
+              ],
+              "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Corp/SME Deposit Management",
+          "functions": [
+            {
+              "id": "func-cd-product-shelf",
+              "title": "Deposit Product Launch/Removal",
+              "description": "Creates, maintains, and launches deposit products.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "management"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-product-display",
+              "title": "Deposit Product Display",
+              "description": "Displays key info of deposit products to users, including product name, yield, purchase and launch rules, etc.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "display"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-asset-query",
+              "title": "Asset and Yield Inquiry",
+              "description": "Shows customers the status and earnings of various types of assets.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "inquiry"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-agreement-deposit",
+              "title": "Agreement Deposit Sign/Cancel",
+              "description": "Provides signing and canceling functions for agreement deposit products; agreement deposits pay ordinary demand interest up to a set amount, with excess balances earning higher agreement deposit rates.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "agreement deposit"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-notice-deposit",
+              "title": "Notice Deposit Deposit/Withdrawal",
+              "description": "Provides deposit and withdrawal functions for notice deposit products; customer notifies bank in advance to withdraw — one-day or seven-day notice periods apply.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "notice deposit"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-time-deposit",
+              "title": "Time Deposit Deposit/Withdrawal",
+              "description": "Provides deposit and withdrawal functions for time deposit products; deposits made for a set term and rate, with principal and interest withdrawn at maturity.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "time deposit"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-large-cd",
+              "title": "Large-denomination Certificate of Deposit Deposit/Withdrawal",
+              "description": "Provides deposit and withdrawal functions for large CDs; fixed-term deposit certificates with large amounts, fixed rates, and transferability.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "deposit product",
+                "large cd"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corp-common-product",
+      "name": "General Product Center",
+      "icon": "fas fa-sitemap",
+      "submodules": [
+        {
+          "name": "Corp/SME Customer Information Management",
+          "functions": [
+            {
+              "id": "func-cd-cust-create",
+              "title": "Customer Creation",
+              "description": "Creates corporate customer records in the system and assigns customer numbers.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management",
+                "creation"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-maintain",
+              "title": "Customer Information Maintenance",
+              "description": "Provides functions to modify corporate customer information.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management",
+                "maintenance"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-batch-maintain",
+              "title": "Batch Information Maintenance",
+              "description": "Provides functions to batch modify corporate customer information.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management",
+                "batch"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-query",
+              "title": "Customer Information Inquiry",
+              "description": "Provides queries for corporate customer information.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management",
+                "inquiry"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-delete-record",
+              "title": "Customer Information Record Deletion",
+              "description": "Provides functions to delete specific corporate customer records (e.g., contact info, ID info), while keeping customer status active in the system.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management",
+                "deletion"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-cust-close",
+              "title": "Cancel Customer",
+              "description": "Provides functions to cancel corporate customers, changing their system status to “Canceled.”",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "customer management",
+                "cancellation"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corp-support",
+      "name": "Underlying Capability Support",
+      "icon": "fas fa-cogs",
+      "submodules": [
+        {
+          "name": "Open Banking",
+          "functions": [
+            {
+              "id": "func-cd-open-partner",
+              "title": "Partner Onboarding",
+              "description": "Registers partner information and assigns access permissions on the open banking platform.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "open banking",
+                "api"
+              ],
+              "documentLink": null
+            },
+            {
+              "id": "func-cd-open-api-mgmt",
+              "title": "API Management",
+              "description": "Manages internal bank service interfaces exposed to partners.",
+              "version": "1.0",
+              "status": "online",
+              "tags": [
+                "open banking",
+                "api"
+              ],
+              "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

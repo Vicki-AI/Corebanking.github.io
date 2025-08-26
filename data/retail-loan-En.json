@@ -1,0 +1,647 @@
+{
+  "id": "retail-loan",
+  "name": "Retail Loan",
+  "icon": "fas fa-hand-holding-usd",
+  "description": "Provides diversified loan services for individual customers, including consumer loans, housing loans, car loans, and other types of credit products.",
+  "overview": {
+    "summary": "A digital credit solution covering the entire lifecycle of pre-loan, in-loan, and post-loan, featuring a highly flexible product configuration factory, a data-driven intelligent risk control system, and refined marketing and collection operational capabilities."
+  },
+  "modules": [
+    {
+      "id": "retail-loan-core",
+      "name": "Retail Loan Core",
+      "icon": "fas fa-landmark",
+      "description": "Provides core accounting processing capabilities for loan business, including accounts, products, interest calculation, disbursement, and repayment.",
+      "submodules": [
+        {
+          "name": "Finance Core",
+          "functions": [
+            {
+              "id": "func-rlc-account-mgmt",
+              "title": "Customer Account Management",
+              "description": "Includes account opening, closing, restarting, and account information modifications.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Account"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-product-factory",
+              "title": "Product Configuration Factory",
+              "description": "Loan products support highly flexible configuration; new products can be fully configured and launched.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Product Factory"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-lending-repayment",
+              "title": "Disbursement and Repayment Functions",
+              "description": "Supports disbursement and repayment functions, including reverse transactions, disbursement cancellation, and repayment cancellation.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Transaction"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-interest-accrual",
+              "title": "Interest Calculation and Accrual",
+              "description": "Supports various interest calculation methods, highly configurable.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Interest"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-billing-mgmt",
+              "title": "Bill Management",
+              "description": "Bill product creation, update, display, and related functions.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Billing"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-asset-disposal",
+              "title": "Asset Disposal",
+              "description": "Supports asset disposal methods such as ABS, write-offs, insurance claims.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Asset Disposal"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-reconciliation",
+              "title": "Reconciliation System",
+              "description": "Includes but is not limited to transaction reconciliation, balance reconciliation, and reasonableness analysis.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Reconciliation"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-accounting",
+              "title": "Accounting Processing",
+              "description": "Supports accounting processes, tax splitting, general ledger reporting, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Accounting"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-asset-restructuring",
+              "title": "Asset Restructuring",
+              "description": "Functions such as refinancing, extensions, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Core", "Asset Restructuring"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Product Center",
+          "functions": [
+            {
+              "id": "func-rlc-product-process",
+              "title": "Product Workflow Management",
+              "description": "Covers processes like account opening, disbursement, repayment, non-financial operations, etc., with flow orchestration.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Process"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-agreement-center",
+              "title": "Customer Agreement Center",
+              "description": "Manages agreements for online proactive repayment, batch deductions, incoming payments, internal repayment waivers, enabling fine-tuned operations to boost repayment rates.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Agreement"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-pricing-center",
+              "title": "Pricing Center",
+              "description": "Manages product pricing, supports various implementations like rule packs and rule tables.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Pricing"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-incoming-center",
+              "title": "Incoming Payment Center",
+              "description": "Supports incoming payment deposits and repayments; enables full or partial customer-level settlements.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Incoming Payment"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-style-center",
+              "title": "Style Center",
+              "description": "Displays different front-end styles for customers based on segments, tags, or metrics.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Frontend"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-contract-mgmt",
+              "title": "Product Contract Management",
+              "description": "Manages contracts for different products under different scenarios.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Contract"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-debit-center",
+              "title": "Deduction Center",
+              "description": "Manages reconciliation files, error files.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Reconciliation", "Deduction"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-batch-notify",
+              "title": "Batch Reminders",
+              "description": "Includes bill due reminders, negative credit reporting reminders, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Product", "Batch", "Reminder"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Debit (Debit-credit)Center",
+          "functions": [
+            {
+              "id": "func-rlc-debit-agreement",
+              "title": "Customer Debit Agreement Management",
+              "description": "Manages card list inquiries, customer card unbinding, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Deduction", "Agreement"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-debit-batch",
+              "title": "Flexible Batch Deduction Management",
+              "description": "Handles flexible batch deduction decisions, intelligent deductions, end-of-day reconciliation, lightweight reconciliation.",
+              "version": "1.0", "status": "Online", "tags": ["Deduction", "Batch Deduction", "Reconciliation"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-debit-online",
+              "title": "Online Transaction Capabilities(Real-time not T+1)",
+              "description": "Provides online transaction capabilities, manages ledger accounts.",
+              "version": "1.0", "status": "Online", "tags": ["Deduction", "Online"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Loan Finance Ops Platform",
+          "functions": [
+            {
+              "id": "func-rlc-ops-query",
+              "title": "Customer Account Information Inquiry",
+              "description": "Daily operations management: query customer basic info, account details, transaction records, deposit history, loan details, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Operations", "Query"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-ops-manual",
+              "title": "Manual Repayment/Adjustment",
+              "description": "Allows manual file uploads using system templates for scenarios like early settlement, penalty interest adjustments, manual repayments, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Operations", "Manual Repayment", "Adjustment"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-ops-writeoff",
+              "title": "Write-off File Processing",
+              "description": "Lets operators upload lists of loans pending write-off; after approval, batch processes write-offs at end-of-day.",
+              "version": "1.0", "status": "Online", "tags": ["Operations", "Write-off", "Asset Disposal"], "documentLink": null
+            },
+            {
+              "id": "func-rlc-ops-reconciliation",
+              "title": "Ledger Reconciliation Management",
+              "description": "Checks whether internal account amounts are correct.",
+              "version": "1.0", "status": "Online", "tags": ["Operations", "Ledger Reconciliation"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-risk-control",
+      "name": "Credit Risk Control",
+      "icon": "fas fa-user-shield",
+      "description": "Provides risk control and decision-making capabilities for the entire pre-loan, in-loan, and post-loan process.",
+      "submodules": [
+        {
+          "name": "Retail Loan Approval Platform",
+          "functions": [
+            {
+              "id": "func-crc-approval-datasource",
+              "title": "External Credit Data Integration & Variable Derivation",
+              "description": "Interfaces external data sources for risk automation, supports writing Python snippets for variable derivation.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Data Source", "Credit"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-strategy",
+              "title": "Automated Approval Strategy Management",
+              "description": "Supports publishing and running Experian strategy packages.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Strategy Management"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-process",
+              "title": "Approval Workflow Management(Limit management)",
+              "description": "Manages workflows like blacklist approvals, fraud checks, identity verification, credit limit/price adjustments.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Workflow Management"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-scoring",
+              "title": "Scoring Model Management",
+              "description": "Supports validation and operation of machine learning models.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Model Management", "Scorecard"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-manual-review",
+              "title": "Remote Review Platform (Optional)",
+              "description": "For high-risk or unclear automated approvals, routes to manual review with tools like auto-calling, guided questionnaires, photo/video verification, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Manual Review"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-inloan-decision",
+              "title": "Mid-loan Decision Management (Optional)",
+              "description": "Post-disbursement risk decisions for repeat borrowers, silent customers, etc., driving credit limit and risk level adjustments.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "In-loan Decision"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-biz-auth",
+              "title": "Business Identity Verification",
+              "description": "Queries business data, small business info, completes personal business identity verification.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Business Loan", "Verification"], "documentLink": null
+            },
+            {
+              "id": "func-crc-approval-biz-limit",
+              "title": "Unified Business Loan Limit Management",
+              "description": "Manages credit lines at the personal and enterprise level.",
+              "version": "1.0", "status": "Online", "tags": ["Approval", "Business Loan", "Limit"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Retail Loan Anti Fraud Platform",
+          "functions": [
+            {
+              "id": "func-crc-antifraud-datasource",
+              "title": "External Credit Data Integration & Variable Derivation",
+              "description": "Interfaces external data sources for risk automation, supports writing Python snippets for variable derivation.",
+              "version": "1.0", "status": "Online", "tags": ["Anti-fraud", "Data Source"], "documentLink": null
+            },
+            {
+              "id": "func-crc-antifraud-kyc",
+              "title": "Customer Identity Verification (KYC)",
+              "description": "Integrates facial recognition in approval processes to verify customer identity against submitted facial data.",
+              "version": "1.0", "status": "Online", "tags": ["Anti-fraud", "KYC", "Face Recognition"], "documentLink": null
+            },
+            {
+              "id": "func-crc-antifraud-strategy-mgmt",
+              "title": "Anti-Fraud Strategy Management",
+              "description": "Executes Experian strategies, builds inputs, and makes anti-fraud decisions based on outputs.",
+              "version": "1.0", "status": "Online", "tags": ["Anti-fraud", "Strategy Management"], "documentLink": null
+            },
+            {
+              "id": "func-crc-antifraud-model-mgmt",
+              "title": "Anti-Fraud Model Management",
+              "description": "Executes machine learning models, builds inputs, and makes anti-fraud decisions from model outputs.",
+              "version": "1.0", "status": "Online", "tags": ["Anti-fraud", "Model Management"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marketing-operations",
+      "name": "Marketing Operations",
+      "icon": "fas fa-bullhorn",
+      "description": "Supports marketing activities, customer segmentation, and refined operations.",
+      "submodules": [
+        {
+          "name": "Marketing Event Platform For loan",
+          "functions": [
+            {
+              "id": "func-mo-benefits-mgmt",
+              "title": "Rewards Management",
+              "description": "Enables flexible marketing configurations and cost control through differentiated rewards combinations and precise accounting (e.g., cashback posting).",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Rewards", "Cost Control"], "documentLink": null
+            },
+            {
+              "id": "func-mo-tags-library",
+              "title": "Marketing Audience Tag Library",
+              "description": "Builds a tagging system across product, risk, marketing, external data; supports dynamic subscriptions and combination strategies for precise targeting and scenario-based marketing.",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Audience", "Tags"], "documentLink": null
+            },
+            {
+              "id": "func-mo-material-mgmt",
+              "title": "Marketing Material Management",
+              "description": "Manages full lifecycle (upload, review, takedown) of marketing materials, supports A/B testing, personalized content matching, and dynamic optimization.",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Material", "A/B Testing"], "documentLink": null
+            },
+            {
+              "id": "func-mo-channel-mgmt",
+              "title": "Marketing Channel Management",
+              "description": "Uses smart routing engines and multi-channel gateways (e.g., app, SMS, outbound calls) to optimize touchpoints and low-efficiency channels.",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Channel", "Smart Routing"], "documentLink": null
+            },
+            {
+              "id": "func-mo-campaign-mgmt",
+              "title": "Marketing Activity Management",
+              "description": "Modular support for full-cycle activity configuration (strategy, channel, rewards, audience), A/B testing, marketing calendars, enabling hour-level launches and next-day performance analysis.",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Campaign Management"], "documentLink": null
+            },
+            {
+              "id": "func-mo-activity-monitoring",
+              "title": "Activity Monitoring and Analysis",
+              "description": "Real-time dashboards tracking conversion, interactions; multi-dimensional funnel analysis and second-level alerts driving dynamic strategy adjustments.",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Monitoring", "Data Analysis"], "documentLink": null
+            },
+            {
+              "id": "func-mo-attribution-analysis",
+              "title": "Activity Effect Attribution",
+              "description": "Integrates multi-source data, applies models (first-touch, last-touch, time decay) to quantify channel contributions, guiding operations, product, and activity optimization.",
+              "version": "1.0", "status": "Online", "tags": ["Marketing", "Attribution", "Data Analysis"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loan-collection-ops",
+      "name": "Personal Loan Collection Operations",
+      "icon": "fas fa-comment-dollar",
+      "description": "Provides professional post-loan collection operations and management capabilities.",
+      "submodules": [
+        {
+          "name": "Collections Case Management",
+          "functions": [
+            {
+              "id": "func-lco-case-entry",
+              "title": "Case Creation for Collections",
+              "description": "Converts overdue customer lists from the loan core into collection cases and stores them daily.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Case Assignment", "Batch Processing"], "documentLink": null
+            },
+            {
+              "id": "func-lco-case-auto-assign",
+              "title": "Automatic Case Assignment",
+              "description": "Automatically assigns collection cases to agencies, teams, or agents based on predefined rules during daily batch runs.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Case Assignment", "Automation"], "documentLink": null
+            },
+            {
+              "id": "func-lco-case-manual-assign",
+              "title": "Manual Case Assignment",
+              "description": "Manually assigns cases to specified agencies, teams, or agents.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Case Assignment", "Manual"], "documentLink": null
+            },
+            {
+              "id": "func-lco-case-exit",
+              "title": "Case Closure for Collections",
+              "description": "Closes and cleans up collection cases based on settled customer lists received from the loan core.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Case Assignment", "Case Closure"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Collections Action Platform",
+          "functions": [
+            {
+              "id": "func-lco-work-order-mgmt",
+              "title": "Collection Work Order Management",
+              "description": "Queries, assigns, exports collection cases; views case details; adds collection action records; manages customer profiles.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Action Platform", "Work Order"], "documentLink": null
+            },
+            {
+              "id": "func-lco-outbound-ops",
+              "title": "Outbound Operations",
+              "description": "Uses softphone calls or notification services to send collection messages to customers.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Action Platform", "Outbound"], "documentLink": null
+            },
+            {
+              "id": "func-lco-case-suspension",
+              "title": "Case Hold",
+              "description": "Temporarily pauses collection activities for special customers (e.g., frequent complaints, sensitive groups).",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Action Platform", "Case Hold"], "documentLink": null
+            },
+            {
+              "id": "func-lco-performance-mgmt",
+              "title": "Performance Management",
+              "description": "Queries operational and performance data, rankings for agencies and collectors through collection reports.",
+              "version": "1.0", "status": "Online", "tags": ["Collections", "Action Platform", "Performance"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-data-management",
+      "name": "Credit Data Management",
+      "icon": "fas fa-analytics",
+      "description": "Builds unified credit data assets and provides data analysis and service capabilities.",
+      "submodules": [
+        {
+          "name": "Data Asset Management Platform",
+          "functions": [
+            {
+              "id": "func-cdm-asset-directory",
+              "title": "Data Asset Management",
+              "description": "Supports credit card data asset definition (standard fields, table fields, interface fields, tag metrics); standardizes business fields; offers configurable, componentized table/interface/tag design.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Asset", "Standard"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-view",
+              "title": "Data Asset View Management",
+              "description": "Provides IT views for managing data asset standards, order, quality; offers business views for scenario-based asset management.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Asset View"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-version",
+              "title": "Data Asset Version Management",
+              "description": "Provides lifecycle and version management, records production versions, manages lifecycle, and controls downstream access.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Version Management"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-usage",
+              "title": "Data Asset Usage Management",
+              "description": "Provides online configuration capabilities for data asset applications.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Usage Management"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-hotspot",
+              "title": "Data Asset Hotspot Monitoring",
+              "description": "Monitors usage hotspots of data assets.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Monitoring"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-asset-lineage",
+              "title": "Data Asset Lineage Analysis",
+              "description": "Analyzes the impact of data asset changes.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Lineage Analysis"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Data Analysis Platform",
+          "functions": [
+            {
+              "id": "func-cdm-analysis-source",
+              "title": "Data Source Access Management",
+              "description": "Supports unified access and management of multiple data sources, ensuring real-time business data sync and centralized report data storage/querying.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Analysis Platform"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-analysis-dashboard",
+              "title": "Data Dashboard & Email Reporting",
+              "description": "Provides dynamic dashboards showing key metrics, supports scheduled email delivery of custom reports for timely business monitoring.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Dashboard"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-analysis-metrics",
+              "title": "Report Indicator Management",
+              "description": "Flexibly configures product indicator data (e.g., delinquency rates, approval rates) to meet analysis needs across departments/scenarios.",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Metrics"], "documentLink": null
+            },
+            {
+              "id": "func-cdm-analysis-visualization",
+              "title": "Visual Report Analysis Configuration",
+              "description": "Uses drag-and-drop tools to quickly generate interactive visual reports (bar charts, pie charts, icons, text reports, funnels, data maps, user behavior analysis, etc.).",
+              "version": "1.0", "status": "Online", "tags": ["Data", "Visualization"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-business-monitoring",
+      "name": "Credit Business Monitoring",
+      "icon": "fas fa-tv",
+      "description": "Provides a panoramic monitoring dashboard for the credit business.",
+      "submodules": [
+        {
+          "name": "Loan Dashboard",
+          "functions": [
+            {
+              "id": "func-cbm-scale-monitoring",
+              "title": "Loan Scale Monitoring",
+              "description": "Monitors loan scale risk changes, risk aggregation, and provides alerts.",
+              "version": "1.0", "status": "Online", "tags": ["Monitoring", "Scale", "Alert"], "documentLink": null
+            },
+            {
+              "id": "func-cbm-customer-monitoring",
+              "title": "Customer Scale Monitoring",
+              "description": "Monitor the business scale from transactional-related-parameter angle",
+              "version": "1.0", "status": "Online", "tags": ["Monitoring", "Customer"], "documentLink": null
+            },
+            {
+              "id": "func-cbm-transaction-monitoring",
+              "title": "Transaction Metric Monitoring",
+              "description": "Monitor the business scale from customer-related-parameter angle",
+              "version": "1.0", "status": "Online", "tags": ["Monitoring", "Transaction", "Metrics"], "documentLink": null
+            },
+            {
+              "id": "func-cbm-exception-monitoring",
+              "title": "Exception Metric Monitoring",
+              "description": "Monitor product anormaly",
+              "version": "1.0", "status": "Online", "tags": ["Monitoring", "Exception", "Metrics"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outbound-robot",
+      "name": "Outbound Call Bot",
+      "icon": "fas fa-robot",
+      "description": "Provides intelligent outbound calling capabilities, supporting marketing and collection scenarios.",
+      "submodules": [
+        {
+          "name": "Outbound Call Bot",
+          "functions": [
+            {
+              "id": "func-or-work-order-mgmt",
+              "title": "Outbound Work Order Management",
+              "description": "Manages inbound work orders, call dispatching, outcome reporting, annotation quality checks, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "Work Order", "Dispatch"], "documentLink": null
+            },
+            {
+              "id": "func-or-carrier-integration",
+              "title": "Telecom Channel Integration",
+              "description": "Manages integrated telecom operators, number pools, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "Channel", "Telecom"], "documentLink": null
+            },
+            {
+              "id": "func-or-strategy-mgmt",
+              "title": "Automated Outbound Strategy Management",
+              "description": "Manages configuration, approval, and concurrent parameters of outbound robots.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "Strategy Management"], "documentLink": null
+            },
+            {
+              "id": "func-or-decision-tree",
+              "title": "Conversation Decision Tree Management",
+              "description": "Manages configuration and approval of dialogue flows.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "Decision Tree", "Dialogue Flow"], "documentLink": null
+            },
+            {
+              "id": "func-or-asr-model",
+              "title": "ASR Model Management",
+              "description": "Manages and maintains ASR (Automatic Speech Recognition) models for speech-to-text.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "ASR", "Model"], "documentLink": null
+            },
+            {
+              "id": "func-or-nlu-model",
+              "title": "NLU Model Management",
+              "description": "Manages and maintains NLU (Natural Language Understanding) models for interpreting text semantics and generating replies.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "NLU", "Model"], "documentLink": null
+            },
+            {
+              "id": "func-or-tts-model",
+              "title": "TTS Model Management",
+              "description": "Manages and maintains TTS (Text-to-Speech) models supporting multiple languages/dialects.",
+              "version": "1.0", "status": "Online", "tags": ["Outbound", "TTS", "Model"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loan-document-management",
+      "name": "Loan Document Management",
+      "icon": "fas fa-folder-open",
+      "description": "Manages various image and document materials during loan application, approval, and duration.",
+      "submodules": [
+        {
+          "name": "Loan Information Entry Platform",
+          "functions": [
+            {
+              "id": "func-ldm-entry-unstructured",
+              "title": "Unstructured Information Entry",
+              "description": "Supports single/double recording modes for entering unstructured data, ensuring input accuracy.",
+              "version": "1.0", "status": "Online", "tags": ["Information Entry", "Unstructured"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-entry-escalation",
+              "title": "Difficult Case Escalation and Management",
+              "description": "Escalates unclear work orders to difficult cases for handling by more experienced staff.",
+              "version": "1.0", "status": "Online", "tags": ["Information Entry", "Difficult Case"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-entry-work-order",
+              "title": "Entry Work Order Management",
+              "description": "Manages ongoing and completed work orders, views entered information, and tracks operator actions.",
+              "version": "1.0", "status": "Online", "tags": ["Information Entry", "Work Order Management"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "eDocument Platform",
+          "functions": [
+            {
+              "id": "func-ldm-edoc-template",
+              "title": "Template Management",
+              "description": "Manages various e-seal templates, queries different stamp templates.",
+              "version": "1.0", "status": "Online", "tags": ["eDocument", "Template"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-synthesis",
+              "title": "Document Synthesis",
+              "description": "Dynamic template synthesis, batch template synthesis, PDF template synthesis, PDF form synthesis (pdfXFA), standard template synthesis (ID card synthesis), CDN templates, Excel templates, PDF merge templates, Word template synthesis.",
+              "version": "1.0", "status": "Online", "tags": ["eDocument", "Synthesis"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-ops",
+              "title": "Operations Management",
+              "description": "Manages seal configurations, document templates, scripts, and dynamic templates.",
+              "version": "1.0", "status": "Online", "tags": ["eDocument", "Operations"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-processing",
+              "title": "Document Processing",
+              "description": "Adds watermarks, removes watermarks, edits documents (highlight/fill), encrypts documents, parses metadata, converts PDFs to images, compresses PDFs, PDF-to-data extraction using machine learning.",
+              "version": "1.0", "status": "Online", "tags": ["eDocument", "Processing", "PDF"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-edoc-verification",
+              "title": "Anti-counterfeit Verification",
+              "description": "Supports ESM seal verification, ESEAL seal verification, ESS seal verification, signature verification portals, and third-party seal verification.",
+              "version": "1.0", "status": "Online", "tags": ["eDocument", "Anti-counterfeit", "Verification"], "documentLink": null
+            }
+          ]
+        },
+        {
+          "name": "Loan Case File Management",
+          "functions": [
+            {
+              "id": "func-ldm-archive-classification",
+              "title": "Archive Classification Management",
+              "description": "Manages storage classifications like contracts, images, etc.",
+              "version": "1.0", "status": "Online", "tags": ["Archive Management", "Classification"], "documentLink": null
+            },
+            {
+              "id": "func-ldm-archive-storage",
+              "title": "Archive Storage",
+              "description": "Uses big data tasks to archive offline storage of various contract and image data.",
+              "version": "1.0", "status": "Online", "tags": ["Archive Management", "Storage"], "documentLink": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
