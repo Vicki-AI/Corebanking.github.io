@@ -140,11 +140,17 @@
         
         .sub-nav.open { display: block; }
         
+        /* 优化二级功能清单字体 */
         .sub-nav-item {
-            padding: 10px 20px 10px 50px;
+            padding: 12px 20px 12px 50px;
             cursor: pointer;
             transition: all 0.3s;
             border-left: 3px solid transparent;
+            font-family: 'Microsoft YaHei', sans-serif;
+            font-size: 0.95rem;
+        }
+        html[lang="en"] .sub-nav-item {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
         }
         
         .sub-nav-item:hover {
@@ -155,7 +161,7 @@
         .sub-nav-item.active {
             background-color: rgba(255, 255, 255, 0.1);
             border-left-color: #ffc107;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         /* 主内容区域 */
